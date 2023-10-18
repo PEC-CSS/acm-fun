@@ -2,7 +2,7 @@ import {Link} from "react-router-dom";
 import "../../styles/components/common/Navbar.css";
 import logo from '../../logo.svg';
 
-let navbarOptions = [
+const navbarOptions = [
     {
         title: "Home",
         url: "/"

@@ -1,0 +1,20 @@
+.activity-card-root {
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition-duration: 300ms;
+}
+
+
+.activity-card-root:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background: lightgray;
+}
+
+.activity-card-root img {
+    height: 80px;
+    width: 80px;
+}
