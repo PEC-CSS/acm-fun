@@ -1,4 +1,5 @@
 import {games} from "../data/content.js"
+import {Link} from "react-router-dom";
 
 export const Games = () => {
     return (
@@ -8,9 +9,9 @@ export const Games = () => {
                 {
                     games.map(game => {
                         return (
-                            <div>
+                            <Link to={`/games/${game.urlTerm}`}>
                                 {game.title}
-                            </div>
+                            </Link>
                         )
                     })
                 }
