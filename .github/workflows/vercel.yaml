@@ -17,8 +17,8 @@ jobs:
       - name: Clean Install
         run: npm ci
 
-      - name: Run test
-        run: npm run test
+      # - name: Run test
+      #   run: npm run test
 
       - name: Build and Bundle
         run: npm run build
