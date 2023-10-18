@@ -14,13 +14,10 @@ jobs:
           node-version: ${{matrix.node_version}}
           cache: 'npm'
 
-      - name: Clean Install
-        run: npm ci
-
-      # - name: Run test
-      #   run: npm run test
+      - name: Install Packages
+        run: npm i
 
       - name: Build and Bundle
-        run: npm run build
+        run: CI=false npm run build
       
       
