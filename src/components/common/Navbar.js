@@ -21,7 +21,7 @@ export const Navbar = () => {
     return (
         <div className="navbar-root">
             <div className="navbar-heading">
-                <img src={logo} />
+                <img src={logo} alt="ACM Fun Logo" />
                 <h1>ACM FUN</h1>
             </div>
             <div className="navbar-content">
