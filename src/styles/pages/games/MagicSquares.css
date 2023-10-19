@@ -1,0 +1,93 @@
+.ms-container {
+    padding: 40px;
+    font-weight: 100;
+    display: flex;
+    row-gap: 20px;
+    flex-direction: column;
+    place-items: center;
+}
+
+.ms-heading {
+    font-size: 40px;
+}
+
+.ms-subheading {
+    font-size: 30px;
+}
+
+.ms-number {
+    font-size: 60px;
+}
+
+.button {
+    border: solid 1px #000;
+    width: fit-content;
+    padding: 10px 20px;
+    margin: 0 auto;
+}
+
+.button:hover {
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+.grid-container {
+    display: grid;
+    margin: 20px auto;
+    gap: 20px;
+    aspect-ratio: 1/1;
+    width: 25vw;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.grid-cell {
+    padding: 10px;
+    border: 1px;
+    border-style: solid;
+    border-color: #ddd;
+}
+
+.grid-cell:hover {
+    border-color: #000;
+    cursor: pointer;
+}
+
+.three-col-table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+}
+
+.each-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.rules {
+    font-style: italic;
+    width: 80%;
+    margin: 0 auto;
+}
+
+input {
+    border: solid 2px #000;
+    aspect-ratio: 1/1;
+    width: 50px;
+    padding: 10px;
+    outline: none;
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: 100;
+    text-align: center;
+}
+
+hr {
+    border: #ddd 1px solid;
+    width: 100%;
+}

@@ -16,7 +16,7 @@ function App() {
                 {
                     games.map(game => {
                         return (
-                            <Route exact path={`/activities/${game.urlTerm}`} element={game.element} />
+                            <Route exact path={`/games/${game.urlTerm}`} element={game.element} />
                         )
                     })
                 }
