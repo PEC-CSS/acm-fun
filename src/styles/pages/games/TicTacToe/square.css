@@ -1,0 +1,18 @@
+.square {
+  border: 1px solid;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.font {
+  font-size: 50px;
+  font-weight: 300;
+}
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}

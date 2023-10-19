@@ -1,0 +1,44 @@
+.heading {
+  margin-top: 50px;
+  font-size: 40px;
+}
+.board-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board-container {
+  margin: 90px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lower {
+  font-size: 40px;
+  margin-right: 10px;
+}
+.lowerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.resetButton{
+    padding: 10px;
+    margin-left: 30px;
+    width: 100px;
+    background-color: transparent;
+    border: 1px solid black;
+}
+.resetButton:hover{
+    cursor: pointer;
+    scale: 1.01;
+}
+
