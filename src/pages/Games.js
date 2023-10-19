@@ -1,17 +1,16 @@
-import {games} from "../data/content.js"
-import {Link} from "react-router-dom";
+import "../styles/pages/Games.css"
+import {games} from "../data/content";
+import {GameCard} from "../components/games/GameCard";
 
 export const Games = () => {
     return (
-        <div>
-            <div>Games</div>
-            <div>
+        <div className="games-root">
+            <h1 className="games-title">Games</h1>
+            <div className="games-content">
                 {
                     games.map(game => {
                         return (
-                            <Link to={`/games/${game.urlTerm}`}>
-                                {game.title}
-                            </Link>
+                            <GameCard game={game} />
                         )
                     })
                 }
