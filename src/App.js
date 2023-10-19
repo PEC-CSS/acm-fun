@@ -10,7 +10,7 @@ import Wrapper from "./activities/components/Wrapper";
 import Screen from "./activities/components/Screen";
 import ButtonBox from './activities/components/ButtonBox'
 import Button from './activities/components/Button'
-import CalcProvider from "./activities/context/CalcContext";
+import CalcProvider from "./activities/components/CalcContext";
 
 function App() {
     return (
