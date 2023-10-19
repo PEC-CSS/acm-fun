@@ -1,4 +1,5 @@
 import {RandomQuote} from "../pages/activities/RandomQuote";
+import {TicTacToe} from "../pages/games/TicTacToe";
 
 export const activities = [
     {
@@ -11,5 +12,11 @@ export const activities = [
 ]
 
 export const games = [
-
+    {
+        title: "Tic-Tac-Toe",
+        description: "Lets beat opponent's ass in TicTacToe",
+        icon: "https://cdn-icons-png.flaticon.com/512/2076/2076261.png",
+        urlTerm: "tic-tac-toe",
+        element: <TicTacToe />
+    }
 ]
