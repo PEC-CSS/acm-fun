@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../styles/pages/games/TicTacToe/square.css";
+import "../../../styles/components/games/TicTacToe/square.css";
 
 const Square = (props) => {
   return (

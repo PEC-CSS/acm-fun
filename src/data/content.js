@@ -1,5 +1,5 @@
 import {RandomQuote} from "../pages/activities/RandomQuote";
-import {TicTacToe} from "../pages/games/TicTacToe/TicTacToe";
+import {TicTacToe} from "../pages/games/TicTacToe";
 
 export const activities = [
     {

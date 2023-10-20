@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Square from "./Square";
-import "../../../styles/pages/games/TicTacToe/TicTacToe.css";
+import Square from "../../components/games/TicTacToe/Square";
+import "../../styles/pages/games/TicTacToe/TicTacToe.css";
 import ReactConfetti from "react-confetti";
 
 export const TicTacToe = () => {
@@ -32,8 +32,15 @@ export const TicTacToe = () => {
     }
     return false;
   };
-
+  const Draw = () => {
+    let count = 0;
+    for (let i = 0; i < 9; i++) {
+      count += state[i] != null;
+    }
+    return (!isWinner && count >= 9);
+  };
   const isWinner = checkWinner();
+  const isDraw = Draw();
 
   const MarkCell = (index) => {
     if (state[index] != null) {
@@ -67,8 +74,17 @@ export const TicTacToe = () => {
           </div>
         </div>
       </div>
-
       <div className="lowerContainer">
+        {isDraw ? (
+          <div className="lowerContainer">
+          <div className="lower">Its a Draw, U both Rock!</div>
+          <button className="resetButton" onClick={() => resetGame()}>
+          {" "}
+          Reset
+        </button>
+        </div>
+        ) : (
+          <div className="lowerContainer">
         {isWinner ? (
           <div>
             <ReactConfetti
@@ -84,8 +100,10 @@ export const TicTacToe = () => {
         )}
         <button className="resetButton" onClick={() => resetGame()}>
           {" "}
-          Reset
+          Resett
         </button>
+      </div>
+        )}
       </div>
     </>
   );
