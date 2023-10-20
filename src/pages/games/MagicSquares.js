@@ -137,10 +137,10 @@ export const MagicSquares = () => {
           >
             {winFlag === 0 ? "Get another number" : "PLAY AGAIN"}
           </div>
-          <div className="game-error">{errMsg.length !== 0 && errMsg}</div>
           <div className="game-outcome">
-            {winFlag === 1 && "Youre' a genius!"}
+            {winFlag === 1 && "You're a winner, genius!"}
           </div>
+          <div className="game-error">{errMsg.length !== 0 && errMsg}</div>
         </div>
         <div className="each-col">
           <div className="grid-container">
@@ -163,7 +163,14 @@ export const MagicSquares = () => {
               );
             })}
           </div>
-          <div className="button" onClick={!winFlag && checkFn}>
+          <div
+            className="button"
+            onClick={() => {
+              if (!winFlag) {
+                checkFn();
+              }
+            }}
+          >
             Check
           </div>
         </div>
