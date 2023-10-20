@@ -1,21 +1,15 @@
-import {games} from "../data/content.js"
-import {Link} from "react-router-dom";
+import { games } from "../data/content";
+import { GameCard } from "../components/games/GameCard";
 
 export const Games = () => {
-    return (
-        <div>
-            <div>Games</div>
-            <div>
-                {
-                    games.map(game => {
-                        return (
-                            <Link to={`/games/${game.urlTerm}`}>
-                                {game.title}
-                            </Link>
-                        )
-                    })
-                }
-            </div>
-        </div>
-    )
-}
+  return (
+    <div className="game-root">
+      <h1 className="game-title">Games</h1>
+      <div className="game-content">
+        {games.map((game) => {
+          return <GameCard game={game} />;
+        })}
+      </div>
+    </div>
+  );
+};

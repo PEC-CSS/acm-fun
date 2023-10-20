@@ -1,3 +1,9 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .ms-container {
     padding: 40px;
     font-weight: 100;
@@ -24,6 +30,7 @@
     width: fit-content;
     padding: 10px 20px;
     margin: 0 auto;
+    font-weight: 400;
 }
 
 .button:hover {
@@ -45,14 +52,34 @@
 
 
 .grid-cell {
+    position: relative;
     padding: 10px;
-    border: 1px;
+    aspect-ratio: 1/1;
+    border: 3px;
     border-style: solid;
-    border-color: #ddd;
+    border-color: #000;
 }
 
+.grid-cell-focus {
+    position: relative;
+    border-style: solid;
+    border-color: cadetblue;
+}
+
+.grid-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    font-weight: 100;
+    text-align: center;
+    color: cadetblue
+}
+
+
 .grid-cell:hover {
-    border-color: #000;
+    border-color: cadetblue;
     cursor: pointer;
 }
 
@@ -90,4 +117,16 @@ input {
 hr {
     border: #ddd 1px solid;
     width: 100%;
+}
+
+.game-error {
+    color: crimson;
+    font-size: 50px;
+}
+
+
+.game-outcome {
+    color: chartreuse;
+    font-size: 50px;
+
 }
