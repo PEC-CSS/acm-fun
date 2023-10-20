@@ -11,6 +11,7 @@ export const Activities = () => {
                     activities.map(activity => {
                         return (
                             <ActivityCard activity={activity} />
+                            // <ActivityCard activity={activity} />
                         )
                     })
                 }

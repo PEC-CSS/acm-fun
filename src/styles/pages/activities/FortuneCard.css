@@ -1,0 +1,32 @@
+.App {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    max-width: 300px;
+}
+
+.card.lucky {
+    background-color: #ffd700;
+    /* Highlight lucky cards with a different background color */
+}
+
+.card img {
+    max-width: 100%;
+}
+
+.lucky-text {
+    font-weight: bold;
+    color: green;
+}
