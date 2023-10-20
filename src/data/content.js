@@ -16,8 +16,8 @@ export const games = [
   {
     urlTerm: "magicsquares",
     title: "Magic Squares",
-    description: "Magic Squares - contributed by y-ashaswini :)",
-    icon: "https://cdn-icons-png.flaticon.com/512/2541/2541991.png",
+    description: "Magic Squares > contribution by y-ashaswini :)",
+    icon: "https://cdn-icons-png.flaticon.com/512/2076/2076261.png",
     element: <MagicSquares />,
   },
   {
