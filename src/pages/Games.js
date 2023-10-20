@@ -1,5 +1,6 @@
-import { games } from "../data/content";
-import { GameCard } from "../components/games/GameCard";
+// import "../styles/pages/Games.css"
+import {games} from "../data/content";
+import {GameCard} from "../components/games/GameCard";
 
 export const Games = () => {
   return (
