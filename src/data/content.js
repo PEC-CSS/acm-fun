@@ -1,6 +1,7 @@
 import { RandomQuote } from "../pages/activities/RandomQuote";
 import { MagicSquares } from "../pages/games/MagicSquares";
 import { TicTacToe } from "../pages/games/TicTacToe";
+import {FortuneCard} from "../pages/activities/FotuneCard";
 import numberblocs from "../assets/numberblocks.png"
 
 export const activities = [
@@ -9,8 +10,16 @@ export const activities = [
         description: "Get random quotes",
         icon: "https://cdn-icons-png.flaticon.com/512/2541/2541991.png",
         urlTerm: "random-quotes",
-        element: <RandomQuote />,
+        element: <RandomQuote />
     },
+
+    {
+        title: "Fortune Card",
+        description: "Get your fortune",
+        icon: "https://aws.astrotalk.com/assets/images/wheel_of_fortune.webp" ,
+        urlTerm: "get-your-fortune",
+        element: <FortuneCard />
+    }
 ];
 
 export const games = [
