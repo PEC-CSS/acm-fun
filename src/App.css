@@ -1,10 +1,26 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mirza&display=swap');
+
 .App {
   text-align: center;
 }
+.navbar-root{
+  padding: 2px 32px;
+}
 
 .App-logo {
-  height: 40vmin;
+  height: 50vmin;
   pointer-events: none;
+}
+.navbar-heading > h1{
+  font-family: 'Mirza', serif;
+  font-size: 25px;
+}
+
+.funVerse-logo{
+  min-width: 68px;
+  min-height: 68px;
+  margin-right: 10px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

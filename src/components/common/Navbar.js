@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 import "../../styles/components/common/Navbar.css";
-import logo from '../../logo.svg';
+import logo from '../../logo.png';
 
 const navbarOptions = [
     {
@@ -21,8 +21,8 @@ export const Navbar = () => {
     return (
         <div className="navbar-root">
             <div className="navbar-heading">
-                <img src={logo} alt="ACM Fun Logo" />
-                <h1>ACM FUN</h1>
+                <img src={logo} alt="FunVerse Logo" className="funVerse-logo" />
+                <h1>Play, Discover, Repeat!</h1>
             </div>
             <div className="navbar-content">
                 {
