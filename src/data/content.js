@@ -2,6 +2,7 @@ import { RandomQuote } from "../pages/activities/RandomQuote";
 import { MagicSquares } from "../pages/games/MagicSquares";
 import { TicTacToe } from "../pages/games/TicTacToe";
 import {FortuneCard} from "../pages/activities/FotuneCard";
+import {SearchWord} from "../pages/activities/getDefinition";
 import numberblocs from "../assets/numberblocks.png"
 
 export const activities = [
@@ -19,6 +20,13 @@ export const activities = [
         icon: "https://aws.astrotalk.com/assets/images/wheel_of_fortune.webp" ,
         urlTerm: "get-your-fortune",
         element: <FortuneCard />
+    },
+    {
+        title: "Search Words",
+        description: "Get any definition",
+        icon: "https://www.i2symbol.com/pictures/emojis/f/2/0/4/f2042fedcbc0cdaee2967c4449b62845.png" ,
+        urlTerm: "search-any-word",
+        element: <SearchWord />
     }
 ];
 
