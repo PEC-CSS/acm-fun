@@ -1,14 +1,19 @@
 #Search{
     width: 300px;
-    height: 20px;
-    border-radius: 15px;
+    height: 50px;
+    border-radius: 7px;
+    border: 2px solid black;
 }
-
+#Search:focus{
+    border: none;
+    outline: 2px solid orange;
+}
 .rquote-root {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 50px;
 }
 
 .word-definition{
@@ -69,17 +74,18 @@
 
 
 .word-button {
-    font-size: 23px;
+    font-size: 17px;
     background: white;
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
     transition-duration: 300ms;
+    border: 2px solid #25f0ff;
 }
 
 .word-button:hover {
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background: #4c99fc;
+    background: #25f0ff;
 }
 
