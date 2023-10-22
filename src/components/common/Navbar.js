@@ -59,42 +59,30 @@ export const Navbar = () => {
     }, [location])
 
     return (
+      <div className="navbar-wrapper">
         <div className="navbar-root">
-            <div className="navbar-heading">
-                <Link 
-                    to="/"
-                    className="nav-logo"
-                >
-                    <img src={logo} alt="ACM Fun Logo" />
-                    <h1>ACM FUN</h1>
-                </Link>
-            </div>
-            <ul>
-                {
-                    navbarOptions.map((item, i) => {
-                        
-                        return (
-                            <li 
-                                key={i}
-                                className="list "
-                            >
-                                <Link 
-                                    to={item.url} 
-                                    class="navbar-item" 
-                                >
-                                    <span class="icon">
-                                        <img src={item.icon} alt={item.title} />
-                                    </span>
-                                    <span class="text">
-                                        {item.title}
-                                    </span>
-                                </Link>
-                            </li>
-                        )
-                    })
-                }
-            <   div class="indicator"></div>
-            </ul>
+          <div className="navbar-heading">
+            <Link to="/" className="nav-logo">
+              <img src={logo} alt="ACM Fun Logo" />
+              <h1>ACM FUN</h1>
+            </Link>
+          </div>
+          <ul>
+            {navbarOptions.map((item, i) => {
+              return (
+                <li key={i} className="list ">
+                  <Link to={item.url} class="navbar-item">
+                    <span class="icon">
+                      <img src={item.icon} alt={item.title} />
+                    </span>
+                    <span class="text">{item.title}</span>
+                  </Link>
+                </li>
+              );
+            })}
+            <div class="indicator"></div>
+          </ul>
         </div>
-    )
+      </div>
+    );
 }
