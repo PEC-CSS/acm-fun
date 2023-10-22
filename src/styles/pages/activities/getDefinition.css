@@ -4,10 +4,24 @@
     border-radius: 15px;
 }
 
+.rquote-root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .word-definition{
     font-family: "Fira Code Light";
     font-style: italic;
     font-size: 20px;
+    margin: 1rem auto;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.word-content {
+    width: 80vw;
 }
 
 
