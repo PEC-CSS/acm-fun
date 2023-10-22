@@ -4,7 +4,7 @@ import "../../styles/pages/activities/getDefinition.css";
 
 export const SearchWord = () => {
   const [term, setTerm] = useState();
-  const [definition, setDefinition] = useState();
+  const [definition, setDefinition] = useState([]);
 
   const generateDefinition = () => {
     axios({
@@ -15,9 +15,10 @@ export const SearchWord = () => {
       },
     })
       .then((res) => {
-        const firstDefinition = res.data.list[0];
-        if (firstDefinition) {
-          setDefinition(firstDefinition.definition);
+        console.log(res.data)
+        const allDefinitions = res.data.list;
+        if (allDefinitions.length) {
+          setDefinition(allDefinitions);
         } else {
           setDefinition("No definition found.");
         }
@@ -52,7 +53,12 @@ export const SearchWord = () => {
         <button onClick={handleSearch} className="word-button">Search</button>
       </div>
       <div className="word-content">
-        <div className="word-definition">{definition}</div>
+        {definition.map((def, index) => (
+        <div className="word-definition">
+            <div key={index}><em>Definition: </em>{def.definition}</div>
+            <div key={index}><em>Example: </em>{def.example}</div>
+            </div>
+          ))}
       </div>
     </div>
   );
