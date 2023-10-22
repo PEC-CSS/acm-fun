@@ -52,7 +52,6 @@ export const MagicSquares = () => {
         for (let i = 0; i < 9; i++) {
             if (board[i].value === "") {
                     allCellsFilled = false;
-                    console.log("the chetan");
                     break;
                 }
             }
