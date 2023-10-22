@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState} from "react";
 import "../../styles/pages/games/MagicSquares.css";
 
 export const MagicSquares = () => {
@@ -46,6 +46,20 @@ export const MagicSquares = () => {
         }
         return false;
     };
+
+    const autocheck = () =>{
+        let allCellsFilled = true;
+        for (let i = 0; i < 9; i++) {
+            if (board[i].value === "") {
+                    allCellsFilled = false;
+                    console.log("the chetan");
+                    break;
+                }
+            }
+            if (allCellsFilled) {
+                checkFn();
+            }
+    }
 
     const checkFn = () => {
         console.log("in check function");
@@ -196,21 +210,22 @@ export const MagicSquares = () => {
                     <div
                         className="button"
                         onClick={() => {
-                            if (!winFlag) {
-                                if (focusCell === "") {
-                                    callError("No cell selected!");
-                                } else if (cellInputValue === "") {
-                                    callError("Nothing to insert!");
-                                }else if (isNumberPresent(cellInputValue)){
-                                    callError("Number already exists in the board!!");
-                                } else {
-                                    let tempBoard = board;
-                                    if (focusCell !== "")
-                                        tempBoard[focusCell].value = cellInputValue;
-                                    // console.log("focus on", focusCell, tempBoard);
-                                    setBoard(tempBoard);
-                                    setFocusCell("");
-                                }
+                                    if (!winFlag) {
+                                    if (focusCell === "") {
+                                        callError("No cell selected!");
+                                    } else if (cellInputValue === "") {
+                                        callError("Nothing to insert!");
+                                    }else if (isNumberPresent(cellInputValue)){
+                                        callError("Number already exists in the board!!");
+                                    } else {
+                                        let tempBoard = board;
+                                        if (focusCell !== "")
+                                            tempBoard[focusCell].value = cellInputValue;
+                                        // console.log("focus on", focusCell, tempBoard);
+                                        setBoard(tempBoard);
+                                        setFocusCell("");
+                                        autocheck();
+                                    }                                
                             }
                         }}
                     >
