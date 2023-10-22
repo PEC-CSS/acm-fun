@@ -2,6 +2,29 @@ import { useState } from "react";
 import axios from "axios";
 import "../../styles/pages/activities/getDefinition.css";
 
+const WordContent = ({definition})=>{
+  if(definition){
+    return(
+      <div className="word-content">
+        {
+          definition?.map((def, index) => (
+            <div className="word-definition">
+              <div key={index}><em>Definition: </em>{def.definition}</div>
+              <div key={index}><em>Example: </em>{def.example}</div>
+            </div>
+            )
+          )
+        }
+        </div>
+    )
+  }
+  return (
+    <div className="word-content">
+      <div className="no-definition">Word not found!</div>
+    </div>
+  )
+}
+
 export const SearchWord = () => {
   const [term, setTerm] = useState();
   const [definition, setDefinition] = useState([]);
@@ -20,7 +43,7 @@ export const SearchWord = () => {
         if (allDefinitions.length) {
           setDefinition(allDefinitions);
         } else {
-          setDefinition("No definition found.");
+          setDefinition(null);
         }
       })
       .catch((error) => console.error(error));
@@ -36,6 +59,7 @@ export const SearchWord = () => {
     }
   };
 
+  console.log(definition)
   return (
     <div className="rquote-root">
       <h1>Your Virtual Dictionary</h1>
@@ -52,14 +76,7 @@ export const SearchWord = () => {
         />
         <button onClick={handleSearch} className="word-button">Search</button>
       </div>
-      <div className="word-content">
-        {definition.map((def, index) => (
-        <div className="word-definition">
-            <div key={index}><em>Definition: </em>{def.definition}</div>
-            <div key={index}><em>Example: </em>{def.example}</div>
-            </div>
-          ))}
-      </div>
+      <WordContent definition={definition}/>
     </div>
   );
 };

@@ -11,6 +11,14 @@
     flex-direction: column;
 }
 
+.no-definition{
+    font-family: "Fira Code Light";
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+    overflow: hidden;
+    margin: 1rem auto;
+}
+
 .word-definition{
     font-family: "Fira Code Light";
     background: rgb(174,171,213);
