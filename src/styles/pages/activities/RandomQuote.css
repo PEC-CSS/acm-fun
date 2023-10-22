@@ -1,31 +1,138 @@
-.rquote-content {
-  margin: 10px;
-  font-style: italic;
-  padding: 10px;
+.rquote-root {
+  margin-top: 25px;
   font-family: "Fira Code Light";
+}
+.header {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+.description {
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-style: italic;
+}
+.rquote-content {
+  font-style: italic;
+  padding: 15px 10px;
+  background: white;
+  margin: auto;
+  border: 1px solid #4b4b4b;
+  width: 80vw;
+  max-width: 800px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px #4b4b4b;
+  padding-left: 20px;
+  animation: quote-appeared 0.5s ease;
+}
+
+@keyframes quote-appeared {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.rquote-content:hover {
+  background: #f1f1f1;
 }
 
 .rquote-quote {
-  font-size: 50px;
   margin: 10px;
+  text-align: left;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  font-style: normal;
+  animation: fade 0.3s ease;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.rquote-quote::before {
+  content: "“";
+}
+.rquote-quote::after {
+  content: "”";
 }
 
 .rquote-author {
   font-size: 25px;
   margin: 10px;
+  text-align: right;
+  padding-right: 20px;
+  font-size: 1.3rem;
+  font-style: italic;
+  margin-top: 20px;
+  animation: slide-left 0.6s ease-in;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(4%);
+    opacity: 20%;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 100%;
+  }
 }
 
 .rquote-button {
-  font-size: 23px;
+  font-size: 1.2rem;
   background: white;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 10px;
+  border-radius: 5px;
+  padding: 20px;
+  border: 1px solid #4b4b4b;
+  box-shadow: 1px 1px 3px #4b4b4b;
+  margin: 10px auto;
+  margin-top: 30px;
   transition-duration: 300ms;
 }
 
 .rquote-button:hover {
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background: #c9c9c9;
+  background: black;
+  color: white;
+  transform: scale(1.1);
+}
+
+.spinner-wrapper {
+  margin: auto;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 200px;
+  height: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
