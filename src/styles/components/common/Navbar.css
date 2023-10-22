@@ -35,14 +35,19 @@
 .navbar-heading img {
     height: 50px;
     width: 50px;
+    margin-left: 10px;
 }
 
 .navbar-heading h1 {
-    font-size: 22px;
-    color: #fff;
-    margin-bottom: 0px;
     display: flex;
     flex-direction: row;
+    font-size: 12px;
+    font-family: 'Poppins';
+    color: #032d7a;
+    padding-left: 2px;
+    margin-bottom: 0px;
+    align-items: center;
+    width: 100px;
 }
 
 .navbar-root ul {

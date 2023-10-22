@@ -66,7 +66,7 @@ export const Navbar = () => {
                     className="nav-logo"
                 >
                     <img src={logo} alt="ACM Fun Logo" />
-                    <h1>ACM FUN</h1>
+                    <h1>ACM-FUN</h1>
                 </Link>
             </div>
             <ul>
