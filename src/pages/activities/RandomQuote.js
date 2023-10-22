@@ -12,7 +12,7 @@ export const RandomQuote = () => {
       url: "https://api.quotable.io/random",
     })
       .then((res) => setQuote(res.data))
-      .catch((error) => console.error(error));
+      .catch((error) => alert('Sorry, there was a problem with the API call. Please try again later.');
   };
 
   useEffect(() => {
