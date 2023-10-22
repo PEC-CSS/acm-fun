@@ -9,15 +9,12 @@
     --clr: #ffffff;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    position: relative;
+.navbar-root {
+    margin-left: auto;
+    margin-right: auto;
     top: 40px;
     background: var(--clr);
-}
 
-.navbar-root {
     position: relative;
     width: 400px;
     height: 70px;
@@ -43,6 +40,9 @@ body {
 .navbar-heading h1 {
     font-size: 22px;
     color: #fff;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
 }
 
 .navbar-root ul {
@@ -68,6 +68,11 @@ body {
     width: 100%;
     text-align: center;
     font-weight: 500;
+}
+
+.nav-logo {
+    display: flex;
+    text-decoration: none;
 }
 
 .navbar-root ul li .navbar-item .icon {

@@ -61,8 +61,13 @@ export const Navbar = () => {
     return (
         <div className="navbar-root">
             <div className="navbar-heading">
-                <img src={logo} alt="logo" />
-                <h1>ACM FUN</h1>
+                <Link 
+                    to="/"
+                    className="nav-logo"
+                >
+                    <img src={logo} alt="ACM Fun Logo" />
+                    <h1>ACM FUN</h1>
+                </Link>
             </div>
             <ul>
                 {
