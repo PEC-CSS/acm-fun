@@ -10,7 +10,7 @@
 }
 
 .navbar-wrapper {
-  display: block;
+  height: 110px;
 }
 .navbar-root {
   margin-left: auto;
