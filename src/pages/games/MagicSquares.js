@@ -38,6 +38,15 @@ export const MagicSquares = () => {
         }, 3000);
     };
 
+    const isNumberPresent = (number) => {
+        for (let i = 0; i < board.length; i++) {
+            if (board[i].value === number) {
+                return true;
+            }
+        }
+        return false;
+    };
+
     const checkFn = () => {
         console.log("in check function");
         let flag_empty = 0;
@@ -192,6 +201,8 @@ export const MagicSquares = () => {
                                     callError("No cell selected!");
                                 } else if (cellInputValue === "") {
                                     callError("Nothing to insert!");
+                                }else if (isNumberPresent(cellInputValue)){
+                                    callError("Number already exists in the board!!");
                                 } else {
                                     let tempBoard = board;
                                     if (focusCell !== "")
