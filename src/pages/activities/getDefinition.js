@@ -56,7 +56,7 @@ export const SearchWord = () => {
         {definition.map((def, index) => (
         <div className="word-definition">
             <div key={index}><em>Definition: </em>{def.definition}</div>
-            <div key={index} style={{marginTop: '10px'}}><em>Example: </em>{def.example}</div>
+            <div key={index}><em>Example: </em>{def.example}</div>
             </div>
           ))}
       </div>

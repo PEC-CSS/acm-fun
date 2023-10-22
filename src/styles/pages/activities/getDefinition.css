@@ -13,11 +13,54 @@
 
 .word-definition{
     font-family: "Fira Code Light";
-    font-style: italic;
+    background: rgb(174,171,213);
+    background: linear-gradient(90deg, rgba(174,171,213,1) 0%, rgba(255,255,255,1) 51%, rgba(152,238,255,1) 100%);    font-style: italic;
     font-size: 20px;
+    text-wrap: wrap;
+    overflow: hidden;
     margin: 1rem auto;
     border: 2px solid black;
     border-radius: 10px;
+    transition: 0.5s all;
+    cursor: pointer;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+    animation: 2s anim-lineUp ease-out;
+}
+
+.word-definition em{
+    color: #0773ff;
+}
+
+.word-definition div{
+    margin: 1rem;
+}
+
+.word-definition::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.word-definition:hover {
+    transform: scale(1.1);
+    overflow: auto;
+}
+
+@keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
 }
 
 .word-content {
