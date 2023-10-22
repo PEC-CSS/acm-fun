@@ -3,6 +3,7 @@ import { MagicSquares } from "../pages/games/MagicSquares";
 import { TicTacToe } from "../pages/games/TicTacToe";
 import {FortuneCard} from "../pages/activities/FotuneCard";
 import {SearchWord} from "../pages/activities/getDefinition";
+import {Jitter}  from "../pages/games/Jitter";
 import numberblocs from "../assets/numberblocks.png"
 
 export const activities = [
@@ -44,6 +45,13 @@ export const games = [
         icon: "https://cdn-icons-png.flaticon.com/512/2076/2076261.png",
         urlTerm: "tic-tac-toe",
         element: <TicTacToe />,
+    },
+    {
+        title: "Jitter Click Game",
+        description: "Click as fast as possible to reach 5 stars.... lakshya",
+        icon: "https://i.kym-cdn.com/entries/icons/original/000/036/070/cover5.jpg",
+        urlTerm: "jitter-game",
+        element: <Jitter />,
     },
 ];
 
