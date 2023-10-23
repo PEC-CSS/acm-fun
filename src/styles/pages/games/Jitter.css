@@ -6,7 +6,7 @@
   height: 100vh;
   background-color: #000020;
   position: relative;
-  font-style: Montserrat;
+  font-family: Montserrat;
 
 }
 .sun{
@@ -59,10 +59,10 @@ animation: 1s;
 
 
 
-.title{
-  
+.title-game{
+  font-family: Montserrat;
   margin-top: -100px;
-  font-style: Montserrat;
+
   font-size: 60px;
   color: yellow;
   text-shadow: 2px 2px 2px #f80909;
@@ -71,8 +71,8 @@ animation: 1s;
 .result-prompt {
   box-shadow: 0px 0px 5px rgb(72, 70, 71);
   color: white;
-  height: 300px;
-  width: 400px;
+  height: 80%;
+  width: 50%;
   font-size: 20px;
   background: linear-gradient(to top, #09203f 70%, #3c566a 100%, #32495a 100%);
   background-image: url("https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
@@ -109,6 +109,7 @@ animation: 1s;
 }
 
 .title1 {
+  font-family: Montserrat;
   font-size: 40px; /* Reduced font size */
   margin-top: -40px;
   color: white;
@@ -125,21 +126,24 @@ animation: 1s;
   font-size: 20px;
   margin-top: -20px;
   text-decoration: 1px line-through;
+  margin-bottom: 60px;
 }
 
 .line1 {
+
   display: flex; /* Use flexbox */
   justify-content: center; /* Horizontally center the content */
 margin-left: 25px;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  transform: translateY(-25px);
+
   color: rgb(243, 13, 174);
   border-left: 2px solid rgb(243, 13, 174);
   border-right: 2px solid rgb(243, 13, 174);
   overflow: visible;
   white-space: nowrap;
   width: 90%;
+
 }
 
 
@@ -152,6 +156,7 @@ margin-left: 25px;
   font-family: Montserrat;
   font-weight: 700px !important;
   color: rgb(255, 255, 0);
+  transform: translateY(20px);
 }
 
 .close-button {
@@ -293,24 +298,26 @@ margin-left: 55px;
   font-size: 50px;
   font-family: Montserrat;
   border-radius: 100%;
-  height: 80px;
-  width: 80px;
+  height: 100px;
+  width: 100px;
   padding: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   line-height: 1;
-  transform: translateX(30px);
+  transform: translateX(25px);
 }
 
-.box2{
+.box2 {
+  margin-top: 40px;
   color: #fafafa;
-  border: 5px dashed rgb(61, 97, 169) ;
+  border: 5px dashed rgb(61, 97, 169);
   text-align: center;
   font-size: 20px;
   font-family: Montserrat;
-
-  height: 25px;
+  height: 50px; /* Adjust the height to your preference */
   width: 150px;
-  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
