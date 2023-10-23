@@ -1,18 +1,13 @@
 .Wordle {
     text-align: center;
-    background-color: black;
-    width: 100vw;
-    height: 100vh;
+    background-color: white;
+    /* width: 100vw;
+    height: 100vh; */
     /* display: flex; */
-    color: white;
+    color: black;
   }
   
-  body {
-    padding: 0%;
-    margin: 0;
-  }
-  
-  nav {
+  .Wordlenav {
     height: 60px;
     width: 100%;
     margin: 0;
@@ -21,10 +16,10 @@
     place-items: center;
   }
   
-  nav h1 {
+  .WordleTitle{
     margin: 0;
     font-family: Helvetica, Arial, sans-serif;
-    color: white;
+    color: black;
     font-size: 45px;
   }
   .game {
@@ -36,11 +31,7 @@
     flex-direction: column;
   }
 
-  .wordleWhite{
-    color: white;
-  }
-  
-  .board {
+  .Wordleboard {
     width: 450px;
     height: 550px;
     border: 1px solid black;
@@ -66,7 +57,7 @@
     place-items: center;
     font-size: 30px;
     font-weight: bolder;
-    color: white;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
   }
   
@@ -88,7 +79,7 @@
     /* margin-top: px; */
   }
   
-  .line1 {
+  .Wordleline1 {
     flex: 33%;
     display: flex;
     flex-direction: row;
@@ -132,3 +123,10 @@
     background-color: #3a393c;
   }
   
+  .Gameoverh1{
+    margin-bottom: 0px;
+  }
+
+  .Wordlefooter{
+    margin-bottom: 20px;
+  }

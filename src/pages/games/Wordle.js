@@ -38,7 +38,7 @@ const Letter = ({ letterPos, attemptVal }) => {
 
 const Board = () => {
   return (
-    <div className="board">
+    <div className="Wordleboard">
       {" "}
       <div className="row">
         <Letter letterPos={0} attemptVal={0} />
@@ -179,7 +179,7 @@ const Keyboard = () => {
 
   return (
     <div className="keyboard" onKeyDown={handleKeyboard}>
-      <div className="line1">
+      <div className="Wordleline1">
         {keys1.map((key) => {
           return <Key key={key} keyVal={key} disabled={disabledLetters.includes(key)} almost={almostLetters.includes(key)} correct={correctLetters.includes(key)} />;
         })}
@@ -278,8 +278,8 @@ export const Wordle=()=> {
 
   return (
     <div className="Wordle">
-      <nav>
-        <h1>Wordle</h1>
+      <nav className="Wordlenav">
+        <h1 className="WordleTitle">Wordle</h1>
       </nav>
       <AppContext.Provider
         value={{
@@ -303,14 +303,14 @@ export const Wordle=()=> {
         <div className="game">
           <Board />
           {gameOver.gameOver ? <div className="gameOver">
-            <h3 className="wordleWhite">
+            <h3 >
               {gameOver.guessedWord
                 ? "You Correctly Guessed the Wordle"
                 : "You Failed to Guess the Word"}
             </h3>
-            <h1 className="wordleWhite">Correct Word: {correctWord}</h1>
+            <h1 className="Gameoverh1">Correct Word: {correctWord}</h1>
             {gameOver.guessedWord && (
-              <h3 className="wordleWhite">You guessed in {currAttempt.attempt + 1} attempts</h3>
+              <h3 className="Wordlefooter">You guessed in {currAttempt.attempt + 1} attempts</h3>
             )}
           </div> : <Keyboard />}
         </div>
