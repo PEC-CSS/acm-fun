@@ -23,7 +23,6 @@ const navbarOptions = [
         url: "/activities"
     }
 ]
-
 export const Navbar = () => {
     let location = useLocation();
 
