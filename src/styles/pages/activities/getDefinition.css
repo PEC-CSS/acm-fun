@@ -1,28 +1,99 @@
 #Search{
     width: 300px;
-    height: 20px;
-    border-radius: 15px;
+    height: 50px;
+    border-radius: 7px;
+    border: 2px solid black;
+}
+#Search:focus{
+    border: none;
+    outline: 2px solid orange;
+}
+.rquote-root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.no-definition{
+    font-family: "Fira Code Light";
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+    overflow: hidden;
+    margin: 1rem auto;
 }
 
 .word-definition{
     font-family: "Fira Code Light";
-    font-style: italic;
+    background: rgb(174,171,213);
+    background: linear-gradient(90deg, rgba(174,171,213,1) 0%, rgba(255,255,255,1) 51%, rgba(152,238,255,1) 100%);    font-style: italic;
     font-size: 20px;
+    text-wrap: wrap;
+    overflow: hidden;
+    margin: 1rem auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition: 0.5s all;
+    cursor: pointer;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+    animation: 2s anim-lineUp ease-out;
+}
+
+.word-definition em{
+    color: #0773ff;
+}
+
+.word-definition div{
+    margin: 1rem;
+}
+
+.word-definition::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.word-definition:hover {
+    transform: scale(1.1);
+    overflow: auto;
+}
+
+@keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+}
+
+.word-content {
+    width: 80vw;
 }
 
 
 .word-button {
-    font-size: 23px;
+    font-size: 17px;
     background: white;
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
     transition-duration: 300ms;
+    border: 2px solid #25f0ff;
 }
 
 .word-button:hover {
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background: #4c99fc;
+    background: #25f0ff;
 }
 
