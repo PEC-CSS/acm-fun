@@ -92,7 +92,7 @@ input::-webkit-inner-spin-button {
 .each-col {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 10px;
 
 }
 
@@ -121,11 +121,17 @@ hr {
 
 .game-error {
     color: crimson;
-    font-size: 50px;
+    font-size: 30px;
 }
 
 
 .game-outcome {
     color: indigo;
     font-size: 60px;
+}
+
+
+.flex-button{
+    display: flex;
+    
 }

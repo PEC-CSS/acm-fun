@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState} from "react";
 import "../../styles/pages/games/MagicSquares.css";
 
 export const MagicSquares = () => {
@@ -37,6 +37,28 @@ export const MagicSquares = () => {
             setErrMsg("");
         }, 3000);
     };
+
+    const isNumberPresent = (number) => {
+        for (let i = 0; i < board.length; i++) {
+            if (board[i].value === number) {
+                return true;
+            }
+        }
+        return false;
+    };
+
+    const autocheck = () =>{
+        let allCellsFilled = true;
+        for (let i = 0; i < 9; i++) {
+            if (board[i].value === "") {
+                    allCellsFilled = false;
+                    break;
+                }
+            }
+            if (allCellsFilled) {
+                checkFn();
+            }
+    }
 
     const checkFn = () => {
         console.log("in check function");
@@ -163,15 +185,27 @@ export const MagicSquares = () => {
                             );
                         })}
                     </div>
-                    <div
-                        className="button"
-                        onClick={() => {
-                            if (!winFlag) {
-                                checkFn();
-                            }
-                        }}
-                    >
-                        Check
+                    <div className="flex-button">
+                        <div
+                            className="button"
+                            onClick={() => {
+                                if (!winFlag) {
+                                    checkFn();
+                                }
+                            }}
+                        >
+                            Check
+                        </div>
+                        <div className="button" onClick={()=>{
+                            
+                                let tempBoard = [...board];
+                                        for(let i=0; i<9; i++){
+                                            tempBoard[i].value = "";
+                                        }
+                                    setBoard(tempBoard);  
+                            }}>
+                                Clear Board
+                        </div>
                     </div>
                 </div>
                 <div className="each-col">
@@ -184,26 +218,45 @@ export const MagicSquares = () => {
                         value={cellInputValue}
                         onChange={(e) => setCellInputValue(e.target.value)}
                     />
-                    <div
-                        className="button"
-                        onClick={() => {
-                            if (!winFlag) {
-                                if (focusCell === "") {
-                                    callError("No cell selected!");
-                                } else if (cellInputValue === "") {
-                                    callError("Nothing to insert!");
-                                } else {
-                                    let tempBoard = board;
-                                    if (focusCell !== "")
-                                        tempBoard[focusCell].value = cellInputValue;
-                                    // console.log("focus on", focusCell, tempBoard);
-                                    setBoard(tempBoard);
-                                    setFocusCell("");
+                    <div className="flex-button">
+                        <div
+                            className="button"
+                            onClick={() => {
+                                        if (!winFlag) {
+                                        if (focusCell === "") {
+                                            callError("No cell selected!");
+                                        } else if (cellInputValue === "") {
+                                            callError("Nothing to insert!");
+                                        }else if (isNumberPresent(cellInputValue)){
+                                            callError("Number already exists in the board!!");
+                                        } else {
+                                            let tempBoard = board;
+                                            if (focusCell !== "")
+                                                tempBoard[focusCell].value = cellInputValue;
+                                            // console.log("focus on", focusCell, tempBoard);
+                                            setBoard(tempBoard);
+                                            setFocusCell("");
+                                            autocheck();
+                                        }                                
                                 }
+                            }}
+                        >
+                            Insert
+                        </div>
+                        <div className="button" onClick={()=>{
+                            if(focusCell === ""){
+                                callError("No cell selected!");
+                            }else{
+                                let tempBoard = board;
+                                if (focusCell !== "")
+                                    tempBoard[focusCell].value = cellInputValue;
+                                setBoard(tempBoard);
+                                setFocusCell("");
+                                autocheck();
                             }
-                        }}
-                    >
-                        Insert
+                        }}>
+                            clear
+                        </div>
                     </div>
                     <hr />
                     <div className="rules">
