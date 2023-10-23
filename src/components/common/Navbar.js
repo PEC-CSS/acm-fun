@@ -59,6 +59,7 @@ export const Navbar = () => {
     }, [location])
 
     return (
+      <div className="navbar-wrapper">
         <div className="navbar-root">
             <div className="navbar-heading">
                 <Link 
@@ -66,7 +67,7 @@ export const Navbar = () => {
                     className="nav-logo"
                 >
                     <img src={logo} alt="ACM Fun Logo" />
-                    <h1>ACM-FUN</h1>
+                    <h1>ACM FUN</h1>
                 </Link>
             </div>
             <ul>
@@ -96,5 +97,6 @@ export const Navbar = () => {
             <   div class="indicator"></div>
             </ul>
         </div>
-    )
+      </div>
+    );
 }

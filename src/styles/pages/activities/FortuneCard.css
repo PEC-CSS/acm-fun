@@ -1,57 +1,56 @@
 .FortuneCard {
-    text-align: center;
-    margin: 20px;
+  text-align: center;
+  margin: 20px;
 }
 
 h1 {
-    font-size: 24px;
-    color: #007BFF;
-    margin-bottom: 20px;
+  font-size: 24px;
+  color: #007bff;
+  margin-bottom: 20px;
 }
 
 .fortune-button {
-    background-color: #FF6F61;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 20px;
+  background-color: #ff6f61;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card {
-    background-color: #F3F4F6;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 10px;
-    max-width: 300px;
-    text-align: center;
-    transition: transform 0.2s ease-in-out;
+  background-color: #f3f4f6;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
 }
 
 .card:hover {
-    transform: scale(1.05);
-    background-color: #EAEAEA;
+  transform: scale(1.05);
+  background-color: #eaeaea;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
 .special-text {
-    color: #f39c12;
-    font-weight: bold;
-    margin-top: 10px;
+  color: #f39c12;
+  font-weight: bold;
+  margin-top: 10px;
 }
-
