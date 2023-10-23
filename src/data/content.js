@@ -1,10 +1,12 @@
 import { RandomQuote } from "../pages/activities/RandomQuote";
 import { MagicSquares } from "../pages/games/MagicSquares";
 import { TicTacToe } from "../pages/games/TicTacToe";
+import { Wordle } from "../pages/games/Wordle";
 import {FortuneCard} from "../pages/activities/FotuneCard";
 import {SearchWord} from "../pages/activities/getDefinition";
 import {Jitter}  from "../pages/games/Jitter";
 import numberblocs from "../assets/numberblocks.png"
+import wordleicon from "../assets/games/Wordle/wordlejpg.png"
 
 export const activities = [
     {
@@ -53,5 +55,12 @@ export const games = [
         urlTerm: "jitter-game",
         element: <Jitter />,
     },
+    {
+        title:"Wordle Game",
+        description:"The normal wordle but you can play as much as you want",
+        icon:wordleicon,
+        urlTerm:"Wordle",
+        element:<Wordle/>
+    }
 ];
 
