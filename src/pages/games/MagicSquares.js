@@ -218,6 +218,7 @@ export const MagicSquares = () => {
                         value={cellInputValue}
                         onChange={(e) => setCellInputValue(e.target.value)}
                     />
+
                     <div className="flex-button">
                         <div
                             className="button"
@@ -253,6 +254,7 @@ export const MagicSquares = () => {
                                 setBoard(tempBoard);
                                 setFocusCell("");
                                 autocheck();
+
                             }
                         }}>
                             clear
