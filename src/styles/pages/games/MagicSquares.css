@@ -129,3 +129,9 @@ hr {
     color: indigo;
     font-size: 60px;
 }
+
+
+.flex-button{
+    display: flex;
+    
+}

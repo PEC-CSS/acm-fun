@@ -1,0 +1,323 @@
+.jitter-click-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #000020;
+  position: relative;
+  font-family: Montserrat;
+
+}
+.sun{
+  background-color: #000020;
+}
+/* Add this CSS for panel alignment */
+.game-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 100%;
+}
+
+.left-panel {
+  margin-left: 50px;
+  text-align: left;
+  color: white;
+}
+
+.center-panel {
+  text-align: center;
+}
+
+.right-panel {
+  text-align: right;
+  color: white;
+  font-family: Montserrat;
+  
+}
+
+.timer-option-button {
+  border: 3px dashed rgb(253, 170, 28) !important;
+  font-size: 22px !important; /* Increase the font size to 50px with !important */
+  margin: 5px; /* Add spacing between buttons */
+  padding: 10px 10px;
+  background: none;
+  color: #fff;
+  font-family: Montserrat;
+  box-shadow: 2px #000;
+animation: 1s;
+}
+
+
+
+.timer-option-button.selected {
+  font-size: 25px;
+  background-color: rgb(253, 170, 28);
+}
+
+
+
+.title{
+  font-family: Montserrat;
+  margin-top: -100px;
+
+  font-size: 60px;
+  color: yellow;
+  text-shadow: 2px 2px 2px #f80909;
+}
+
+.result-prompt {
+  box-shadow: 0px 0px 5px rgb(72, 70, 71);
+  color: white;
+  height: 80%;
+  width: 50%;
+  font-size: 20px;
+  background: linear-gradient(to top, #09203f 70%, #3c566a 100%, #32495a 100%);
+  background-image: url("https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 100px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2;
+
+}
+
+.result-prompt {
+  /* Your existing styles... */
+  opacity: 0; /* Initially, make the prompt invisible */
+  transition: opacity 0.2s; /* Add a smooth transition for opacity */
+}
+
+.result-prompt.visible {
+  opacity: 1; /* Make the prompt visible when the 'visible' class is added */
+}
+
+.score{
+  margin-top: -10px;
+  font-size: 17px;
+  transform: translateY(-70px);
+  border: 2px solid rgb(0, 251, 255);
+  width: 400px;
+  background-color: #020414;
+  border-radius: 10px;
+}
+
+.title1 {
+  font-family: Montserrat;
+  font-size: 40px; /* Reduced font size */
+  margin-top: -40px;
+  color: white;
+  text-shadow: 1px 1px 4px blue;
+  text-shadow: 2px 2px 4px rgb(255, 0, 0);
+  overflow: visible;
+  white-space: nowrap;
+  width: 90%;
+  margin-left: 25px;
+}
+.sub{
+  color: white;
+  font-family: Montserrat;
+  font-size: 20px;
+  margin-top: -20px;
+  text-decoration: 1px line-through;
+  margin-bottom: 60px;
+}
+
+.line1 {
+
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Horizontally center the content */
+margin-left: 25px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+
+  color: rgb(243, 13, 174);
+  border-left: 2px solid rgb(243, 13, 174);
+  border-right: 2px solid rgb(243, 13, 174);
+  overflow: visible;
+  white-space: nowrap;
+  width: 90%;
+
+}
+
+
+
+
+
+
+.stars{
+  font-size: 30px;
+  font-family: Montserrat;
+  font-weight: 700px !important;
+  color: rgb(255, 255, 0);
+  transform: translateY(20px);
+}
+
+.close-button {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+}
+
+.clicks{
+  margin-top: 70px;
+}
+
+.click-button-container {
+margin-left: 55px;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border: 4px dashed #b72121;
+  border-radius: 50%;
+  animation: rotate 10s linear infinite;
+  animation-play-state: paused;
+  margin-top: 20px;
+  
+}
+
+.click-button-container.rotating {
+  
+  animation-play-state: running;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Add these styles to your existing CSS or create a new CSS file and import it */
+.star-table {
+  width: 60%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  color: white;
+  transform: translateY(-70px);
+  background-image: url('../../../assets/games/jitter/image.jpg');
+  background-size: cover;
+  backdrop-filter: blur(10px);
+  border-radius: 10px; /* Apply border-radius to the entire table */
+  box-shadow: 0px 0px 4px black;
+}
+
+.star-table th, .star-table td {
+  border: 1px solid #443e3e;
+  padding: 12px;
+  text-align: center;
+  border-radius: 10px; /* Apply border-radius to table cells */
+}
+
+
+
+
+.click-button {
+  font-family: Montserrat;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #ff00cc;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s;
+  z-index: 1;
+  transform: translate(75px);
+}
+
+.click-button.active {
+  background-color: #ff00cc;
+}
+
+.ripple {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 0.7s linear;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(5);
+    opacity: 0;
+  }
+}
+
+.restart-button {
+  font-family: Montserrat;
+  background-color: #fb220a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.restart-button:hover {
+  transform: scale(1.1);
+}
+
+.timer-options {
+  display: flex;
+  gap: 10px;
+}
+
+.timer-options button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.timer-options button.selected {
+  font-weight: bold;
+}
+
+.box {
+  color: #ff6200;
+  border: 5px dashed rgb(61, 97, 169) ;
+  text-align: center;
+  font-size: 50px;
+  font-family: Montserrat;
+  border-radius: 100%;
+  height: 100px;
+  width: 100px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  transform: translateX(25px);
+}
+
+.box2 {
+  margin-top: 40px;
+  color: #fafafa;
+  border: 5px dashed rgb(61, 97, 169);
+  text-align: center;
+  font-size: 20px;
+  font-family: Montserrat;
+  height: 50px; /* Adjust the height to your preference */
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
