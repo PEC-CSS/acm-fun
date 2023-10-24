@@ -1,31 +1,77 @@
-# ACM FUN
+# ACM FUN - React.js Project
 
-An initiative by PECACM for engaging beginners in development to some open source contributions :)
+ACM FUN is an exciting initiative by PECACM, aimed at engaging beginners in the world of development and open source contributions. 😄
 
-## Available Scripts
+Live URL:- https://acm-fun.vercel.app/
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Description](#acm-fun---reactjs-project)
+- [Features](#features)
+- [Tech Used](#tech-used)
+- [How to start](#how-to-start)
+- [Contributing](#contributing)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- A fun and interactive web application built using React.js.
+- Engage with open source contributions in a beginner-friendly environment.
+- Collaborate with a community of like-minded individuals.
 
-### `npm run build`
+## Tech Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+React is a JavaScript library for building fast and interactive UIs.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Vercel is a cloud platform for deploying and scaling React applications.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How to start
+
+1. Clone the repository
+
+```
+  git clone https://github.com/PEC-CSS/acm-fun.git
+```
+
+2. Change the working directory
+
+```
+  cd acm-fun
+```
+
+3. Install dependencies
+
+```
+  npm install
+```
+
+4. Run the app
+
+```
+  npm start
+```
+
+5. Open your web browser and navigate to http://localhost:3000 to view the app.
+
+The page will automatically reload when you make changes, and any lint errors will be displayed in the console.
+
+6. To build for production use the command:
+
+```
+npm run build
+```
+
+This command bundles React in production mode and optimizes the build for the best performance. The build is minified, and the filenames include hashes. Once the build process is complete, your app is ready to be deployed.
+
+# Contributing
+
+- To contribute to ACM FUN, refer to [Contributing Guidlines](./Contributing.md)
 
 # Contributors
 
 <a href="https://github.com/PEC-CSS/acm-fun/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=PEC-CSS/acm-fun" />
 </a>
+
+<br>
+
+We welcome your contributions and hope you enjoy your journey with ACM FUN!
