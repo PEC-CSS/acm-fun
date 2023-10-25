@@ -31,6 +31,8 @@
   .RandFlag {
     border: 2px solid black;
     border-radius: 2px;
+    width: 350px;
+    height: 225px;  
   }
   
   .hearts {
