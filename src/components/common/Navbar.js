@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Link, useLocation } from "react-router-dom";
 import "../../styles/components/common/Navbar.css";
-import logo from '../../logo.svg';
+import logo from '../../logo.png';
 import home_icon from '../../assets/icons/home-outline.svg';
 import game_icon from '../../assets/icons/game-controller-outline.svg';
 import pulse_icon from '../../assets/icons/pulse-outline.svg';
