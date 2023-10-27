@@ -68,7 +68,7 @@ function Footer() {
                         </div>
                     </div>
 
-                    <div className="col-md-4 p-3">
+                    <div className="col-md-4 p-3 menuItem">
                         <h2>Community</h2>
                         <ul className="comm list-group list-group-flush">
                             <li className="list-group-item"><Link aria-label="Development Web/App" to="https://www.pecacm.com//branches/development" target="_blank">Development Web/App</Link></li>
