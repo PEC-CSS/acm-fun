@@ -4,15 +4,16 @@ import "../../styles/pages/activities/RandomQuote.css";
 
 export const RandomQuote = () => {
   const [quote, setQuote] = useState(null);
+  const [error, setError] = useState(null);
 
   const generateQuote = () => {
     setQuote(null);
     axios({
       method: "GET",
-      url: "https://api.quotable.io/random",
+      url: "https://api.qutable.io/random",
     })
       .then((res) => setQuote(res.data))
-      .catch((error) => console.error(error));
+      .catch((error) => setError(error));
   };
 
   useEffect(() => {
@@ -31,7 +32,12 @@ export const RandomQuote = () => {
           <div className="rquote-author">- {quote.author}</div>
         </div>
       )}
-      {!quote && (
+      {error && (
+        <div className="rquote-content error">
+          {error.message}
+        </div>
+      )}
+      {!quote && !error && (
         <div className="spinner-wrapper">
           <div className="spinner"></div>
         </div>

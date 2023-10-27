@@ -65,6 +65,13 @@
   content: "”";
 }
 
+.error{
+  color: red;
+  font-size: 1.8rem;
+  padding: 40px 0;
+  font-style: oblique;
+}
+
 .rquote-author {
   font-size: 25px;
   margin: 10px;
