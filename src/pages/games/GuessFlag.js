@@ -14,6 +14,7 @@ export const GuessTheFlag = () => {
     const [hintOneMessage, setHintOneMessage] = useState("");
     const [hintTwoMessage, setHintTwoMessage] = useState("");
     const [guessMade, setGuessMade] = useState(false);
+    const isSubmitDisabled = userInput.trim() === '' || lifelines === 0 || guessMade;
 
     useEffect(() => {
         generateRandomFlag();
@@ -150,7 +151,14 @@ export const GuessTheFlag = () => {
                         placeholder="Enter your guess"
                         disabled={lifelines === 0 || guessMade}
                     />
+                    
                 ) : null}
+                {!guessMade && lifelines > 0 ? (
+                    <button className="fgsubmit" type="submit" disabled={isSubmitDisabled}>
+                        Submit
+                    </button>
+                ) : null}
+                </form>
                 <div className="hint-container">
                     {guessMade && lifelines > 0 ? (
                         <button className="fgbutton" type="button" onClick={handleNext}>
@@ -179,7 +187,6 @@ export const GuessTheFlag = () => {
                         </>
                     ) : null}
                 </div>
-            </form>
 
         </div>
     );
