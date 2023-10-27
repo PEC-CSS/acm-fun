@@ -1,0 +1,29 @@
+.list-group-item {
+    background-color: transparent !important;
+    border: none !important;
+}
+.list-group-item a{
+    color: white;
+}
+
+.links li{
+    text-decoration: none;
+    list-style-type: none;
+}
+.events{
+    padding: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.pecacm {
+    width: 35%;
+    height: auto;
+    /* background:linear-gradient(to bottom, #ffffff, #e0e0e0); */
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.pec {
+    width: 55%;
+    height: auto;
+
+}
