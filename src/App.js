@@ -5,6 +5,7 @@ import {Navbar} from "./components/common/Navbar";
 import {Games} from "./pages/Games";
 import {Activities} from "./pages/Activities";
 import {activities, games} from "./data/content";
+import Footer from "./components/common/Footer"
 
 function App() {
     return (
@@ -29,6 +30,7 @@ function App() {
                     })
                 }
             </Routes>
+            <Footer />
         </div>
     );
 }
