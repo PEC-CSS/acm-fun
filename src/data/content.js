@@ -2,6 +2,7 @@ import { RandomQuote } from "../pages/activities/RandomQuote";
 import { MagicSquares } from "../pages/games/MagicSquares";
 import { TicTacToe } from "../pages/games/TicTacToe";
 import { Wordle } from "../pages/games/Wordle";
+import { GuessTheFlag } from "../pages/games/GuessFlag";
 import {FortuneCard} from "../pages/activities/FotuneCard";
 import {SearchWord} from "../pages/activities/getDefinition";
 import {Jitter}  from "../pages/games/Jitter";
@@ -9,6 +10,7 @@ import {RandomMeme} from "../pages/activities/RandomMemes";
 import meme from "../assets/activities/meme.jpg"
 import numberblocs from "../assets/numberblocks.png"
 import wordleicon from "../assets/games/Wordle/wordlejpg.png"
+import flagger from "../assets/games/flag guess/flagger.png"
 
 export const activities = [
     {
@@ -69,6 +71,13 @@ export const games = [
         icon:wordleicon,
         urlTerm:"Wordle",
         element:<Wordle/>
+    },
+    {
+        title:"Guess The Flag",
+        description:"Learn geography in fun way",
+        icon:flagger,
+        urlTerm:"GuessTheFlag",
+        element:<GuessTheFlag/>
     }
 ];
 
