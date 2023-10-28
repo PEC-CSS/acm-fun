@@ -22,7 +22,7 @@ const CardItem = (props) => {
           />
         </div>
         <div class="card-body">
-          <h5 class="card-title" style={{}}>{props.title}</h5>
+          <h5 class="card-title">{props.title}</h5>
           <p class="card-text">{props.text}</p>
           <Link to={props.path} class="btn btn-primary">
             Play

@@ -10,19 +10,14 @@
 }
 
 .navbar-wrapper {
-  position: fixed;
-  /*top: 0;
-  left: 32%; */
-  
   height: 110px;
-  z-index: 1000;
 }
 .navbar-root {
   margin-left: auto;
   margin-right: auto;
   top: 40px;
   background: var(--clr);
-  
+
   position: relative;
   width: 400px;
   height: 70px;
@@ -119,7 +114,7 @@
   top: -60%;
   width: 70px;
   height: 70px;
-  background-color: #26b4ec;
+  background: #26b4ec;
   border-radius: 50%;
   border: 6px solid var(--clr);
   transition: 0.5s;
