@@ -61,8 +61,7 @@
 
 .rmeme-submit:hover{
     background-color: blue;
-    height: 2.5rem;
-    width: 5.5rem;
+    transform: scale(1.1);
     color: white;
     cursor: pointer;
 }

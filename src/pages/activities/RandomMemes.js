@@ -11,8 +11,7 @@ export const RandomMeme = () => {
     function Submit() {
         setLink(subreddit)
         setSubreddit("")   
-        document.getElementById('text').value = ''   
-        generateMeme()  
+        document.getElementById('rmeme-text').value = ''    
     }
 
     function GetName(val){
@@ -33,10 +32,10 @@ export const RandomMeme = () => {
 
     return (
         <div className="rmeme-root">
-            <h1>Random Meme Generator</h1>
             <div>Enter the name of Reddit community you want to get memes from.</div>
             <div> Some examples are animememes, dankmemes, wholesomememes, etc. Submit empty box to get random memes</div>
-            <input className="rmeme-text" placeholder="Enter name of community here" id="text" type="text" onChange={GetName}></input>
+            <div> <b>* Enter name of community without r/. For example to get anime memes and access community r/animememes, enter just animememes.</b></div>
+            <input className="rmeme-text" placeholder="Enter name of community here" id="rmeme-text" type="text" onChange={GetName}></input>
             <button className="rmeme-submit" onClick={Submit}>Submit</button>
             {
                 meme && (
