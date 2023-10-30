@@ -6,6 +6,8 @@ import { GuessTheFlag } from "../pages/games/GuessFlag";
 import {FortuneCard} from "../pages/activities/FotuneCard";
 import {SearchWord} from "../pages/activities/getDefinition";
 import {Jitter}  from "../pages/games/Jitter";
+import {RandomMeme} from "../pages/activities/RandomMemes";
+import meme from "../assets/activities/meme.jpg"
 import numberblocs from "../assets/numberblocks.png"
 import wordleicon from "../assets/games/Wordle/wordlejpg.png"
 import flagger from "../assets/games/flag guess/flagger.png"
@@ -18,7 +20,13 @@ export const activities = [
         urlTerm: "random-quotes",
         element: <RandomQuote />
     },
-
+    {
+        title: "Random memes",
+        description: "Get random meme",
+        icon: meme,
+        urlTerm: "random-memes",
+        element: <RandomMeme />
+    },
     {
         title: "Fortune Card",
         description: "Get your fortune",
