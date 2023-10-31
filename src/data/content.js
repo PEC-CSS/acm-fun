@@ -7,6 +7,7 @@ import {FortuneCard} from "../pages/activities/FotuneCard";
 import {SearchWord} from "../pages/activities/getDefinition";
 import {Jitter}  from "../pages/games/Jitter";
 import {RandomMeme} from "../pages/activities/RandomMemes";
+import { RandomJoke } from "../pages/activities/RandomJoke";
 import meme from "../assets/activities/meme.jpg"
 import numberblocs from "../assets/numberblocks.png"
 import wordleicon from "../assets/games/Wordle/wordlejpg.png"
@@ -40,6 +41,13 @@ export const activities = [
         icon: "https://www.i2symbol.com/pictures/emojis/f/2/0/4/f2042fedcbc0cdaee2967c4449b62845.png" ,
         urlTerm: "search-any-word",
         element: <SearchWord />
+    },
+    {
+        title: "Random Jokes",
+        description: "Get random jokes",
+        icon: "https://www.troublefreepool.com/media/joke-png.127455/full",
+        urlTerm: "random-jokes",
+        element: <RandomJoke />
     }
 ];
 
