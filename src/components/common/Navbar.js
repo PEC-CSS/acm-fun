@@ -35,13 +35,13 @@ export const Navbar = () => {
             list[2].classList.remove("active");
         }
 
-        if (location.pathname === "/games") {
+        if (location.pathname.includes("/games")) {
             list[0].classList.remove("active");
             list[1].classList.add("active");
             list[2].classList.remove("active");
         }
 
-        if (location.pathname === "/activities") {
+        if (location.pathname.includes("/activities")) {
             list[0].classList.remove("active");
             list[1].classList.remove("active");
             list[2].classList.add("active");
