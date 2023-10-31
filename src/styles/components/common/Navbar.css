@@ -9,6 +9,10 @@
     --clr: #ffffff;
 }
 
+.navbar-wrapper {
+    height: 110px;
+}
+
 .navbar-root {
     margin-left: auto;
     margin-right: auto;
