@@ -1,0 +1,67 @@
+.rmeme-root {
+    display: flexbox;
+    flex-direction: row;
+}
+/* .rmeme-content {
+    margin: 10px;
+    font-style: italic;
+    padding: 10px;
+    font-family: "Fira Code Light";
+
+} */
+.rmeme-meme {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rmeme-meme img{
+    max-width: 30rem;
+    max-height: 30rem;
+    object-fit: contain;
+}
+
+.rmeme-button {
+    font-size: 23px;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    transition-duration: 300ms;
+}
+
+.rmeme-button:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: #c9c9c9;
+}
+
+.rmeme-text {
+    width: 20rem;
+    height: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.rmeme-text::placeholder{
+    font-size: large;
+}
+
+.rmeme-submit {
+    margin-left: 1rem;
+    height: 2rem;
+    width: 5rem;
+    border-radius: 2rem;
+    color: blue;
+    background-color: white;
+    border-color: blue;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    transition-duration: 0.3s;
+}
+
+.rmeme-submit:hover{
+    background-color: blue;
+    transform: scale(1.1);
+    color: white;
+    cursor: pointer;
+}

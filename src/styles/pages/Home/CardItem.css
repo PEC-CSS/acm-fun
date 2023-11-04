@@ -1,0 +1,24 @@
+.card-image{
+    width: 100%;
+    height: 35vh; 
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    /* padding: 0 !important; */
+}
+.card-body{
+    width: 100%;
+    height: 22vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 !important;
+}
+
+@media screen and (max-width:768px) {
+    .card-image{
+       height: 30vh;
+       object-fit: cover;
+    }
+}
