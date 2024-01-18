@@ -12,6 +12,7 @@ import meme from "../assets/activities/meme.jpg"
 import numberblocs from "../assets/numberblocks.png"
 import wordleicon from "../assets/games/Wordle/wordlejpg.png"
 import flagger from "../assets/games/flag guess/flagger.png"
+import Calculator from "../pages/activities/Calculator"
 
 export const activities = [
     {
@@ -48,6 +49,13 @@ export const activities = [
         icon: "https://www.troublefreepool.com/media/joke-png.127455/full",
         urlTerm: "random-jokes",
         element: <RandomJoke />
+    },
+    {
+        title: "Calculator",
+        description: "A Simple Calculator",
+        icon: "https://cdn2.iconfinder.com/data/icons/ios7-inspired-mac-icon-set/512/Calculator_512.png",
+        urlTerm: "calculator",
+        element: <Calculator />
     }
 ];
 
