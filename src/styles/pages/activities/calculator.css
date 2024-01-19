@@ -1,0 +1,104 @@
+#calc-root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+#calc-background {
+    height: 450px;
+    width: 300px;
+    border-radius: 15px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #calc-screen {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 15px;
+    height: 70px;
+    width: 270px;
+    border-radius: 15px;
+    background-color: #2b3025;
+  }
+  #display {
+    color: white;
+    font-family: arial;
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    font-size: 30px;
+    z-index: 1;
+  }
+  #calc-buttons {
+    position: relative;
+    height: 340px;
+    width: 270px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+  .lg-buttons {
+    height: 60px;
+    width: 130px;
+    border-radius: 50px;
+    display: flex;
+  }
+  .lg-button-vert {
+    height: 130px;
+    width: 60px;
+    border-radius: 50px;
+    display: flex;
+  }
+  .sm-buttons {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+  }
+  .grey-buttons {
+    background-color: #c6c6c6;
+  }
+  .orange-buttons {
+    background-color: #ed9700;
+  }
+  .margin-left {
+    margin-left: 10px;
+  }
+  .margin-top {
+    margin-top: 10px;
+  }
+  #zero {
+    position: absolute;
+    top: 280px;
+  }
+  #decimal {
+    position: absolute;
+    top: 280px;
+    left: 130px;
+  }
+  .calc-btn.lg-buttons p{
+    font-family: arial;
+    font-weight: bold;
+    font-size: 25px;
+    margin: auto;
+  }
+  .calc-btn.sm-buttons p{
+    font-family: arial;
+    font-weight: bold;
+    font-size: 25px;
+    margin: auto;
+  }
+  .calc-btn.lg-button-vert p{
+    font-family: arial;
+    font-weight: bold;
+    font-size: 25px;
+    margin: auto;
+  }
+  p {
+    user-select: none;
+  }
+  .calc-btn:hover {
+    border: 3px solid white;
+  }
