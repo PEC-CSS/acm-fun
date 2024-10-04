@@ -54,13 +54,11 @@ Vercel is a cloud platform for deploying and scaling React applications.
 
 The page will automatically reload when you make changes, and any lint errors will be displayed in the console.
 
-6. To build for production use the command:
-
-```
-npm run build
-```
-
-This command bundles React in production mode and optimizes the build for the best performance. The build is minified, and the filenames include hashes. Once the build process is complete, your app is ready to be deployed.
+6. Make sure to follow the directory structure while adding a new **game** or **activity**
+ - Your game or activity should be created inside a react component, the file for which should be created in `src/pages/games` for games and `src/pages/activities` for activities.
+ - The css file for your component must be created inside the `src/styles/pages/games` folder for games and `src/styles/pages/activities` for activities.
+ - To ensure that your created component appears on the website, you must add an entry for your game or activity in the `content.js` file present in `src/data` folder.
+ - Refer to this [pull request](https://github.com/PEC-CSS/acm-fun/pull/37/files) to get an idea of the changes you need to make. **Do not make any changes other than these unless explicitly required.**
 
 # Contributing
 
