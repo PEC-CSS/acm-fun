@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import '../../styles/pages/Home/CardItem.css'
 const CardItem = (props) => {
 
@@ -24,9 +24,14 @@ const CardItem = (props) => {
         <div class="card-body">
           <h5 class="card-title">{props.title}</h5>
           <p class="card-text">{props.text}</p>
-          <Link to={props.path} class="btn btn-primary">
+          <ScrollLink
+            to={props.path}  
+            smooth={true}
+            duration={500}
+            className="btn btn-primary"
+          >
             Play
-          </Link>
+          </ScrollLink>
         </div>
       </div>
     </div>
