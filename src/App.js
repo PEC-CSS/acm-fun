@@ -5,6 +5,9 @@ import {Games} from "./pages/Games";
 import {Activities} from "./pages/Activities";
 import {activities, games} from "./data/content";
 import {Navbar} from './components/common/Navbar';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 function App() {
     return (

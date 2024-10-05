@@ -10,9 +10,14 @@ const CardItem = (props) => {
     height: '100%',
   };
 
+  const cardStyle = {
+    width: '500px', 
+    margin: '20px'
+  };
+
   return (
     <div className="col-md-4 col-sm-6 mb-4">
-      <div class="card container-fluid">
+      <div class="card container-fluid" style={cardStyle}>
         <div className="card-image">
           <img
             className="card-img-top"

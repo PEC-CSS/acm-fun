@@ -1,16 +1,42 @@
 import React from 'react'
 import CardItem from '../../components/Home/CardItem'
-// import "../../styles/pages/Home/Cards.css"
+import Slider from 'react-slick';
+import "../../styles/pages/Home/Cards.css"
 import Wordle from "../../assets/games/Wordle/wordlejpg.png"
 import flagGame from "../../assets/games/flag guess/flagger.png"
 import magicSquare from "../../assets/numberblocks.png"
 
 const Cards = () => {
+    // Slick settings for the carousel
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,  // Number of cards to show at once
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
+    };
+
     return (
-
         <div className='container'>
-            <div className='row justify-content-center'>
-
+            <Slider {...settings}>
                 <CardItem
                     src={Wordle}
                     text="Wordle Game"
@@ -59,8 +85,7 @@ const Cards = () => {
                     label="Search Words"
                     path='/activities/search-any-word'
                     title='Search Words' />
-
-            </div>
+            </Slider>
         </div>
     )
 }
