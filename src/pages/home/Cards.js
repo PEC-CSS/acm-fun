@@ -86,7 +86,6 @@ const Cards = () => {
                     path='/activities/search-any-word'
                     title='Search Words' />
             </Slider>
-            {/* </div> */}
         </div>
     )
 }
