@@ -1,5 +1,5 @@
 .card-image{
-    width: 100%;
+    width: 266px;
     height: 35vh; 
     display: flex;
     justify-content: center;
@@ -7,7 +7,7 @@
     /* padding: 0 !important; */
 }
 .card-body{
-    width: 100%;
+    width: 266px;
     height: 22vh; 
     display: flex;
     flex-direction: column;
