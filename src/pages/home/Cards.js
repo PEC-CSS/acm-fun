@@ -36,7 +36,6 @@ const Cards = () => {
 
     return (
         <div className='container'>
-            {/* <div className='row justify-content-center'> */}
             <Slider {...settings}>
                 <CardItem
                     src={Wordle}
