@@ -171,7 +171,7 @@ export const MagicSquares = () => {
                                 <span
                                     key={idx}
                                     className={
-                                        focusCell === cell.index ? "grid-cell-focus" : "grid-cell"
+                                        focusCell === cell.index ? "grid-cell-focus dark:border-white" : "grid-cell dark:border-white"
                                     }
                                     onClick={() => {
                                         if (!winFlag) {
