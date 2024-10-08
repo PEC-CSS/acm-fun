@@ -9,24 +9,7 @@ export const RandomAnimeQuote = () => {
   const generateQuote = async () => {
     try {
       setQuote(null);
-      const res = await axios.get(
-        "/api/v1/quotes/random"
-      );
-      console.log(res.data.data);
-      //   const res = {
-      //     status: "success",
-      //     data: {
-      //       content: "Whenever I counted on someone, I ended up getting hurt.",
-      //       anime: {
-      //         id: 2,
-      //         name: "Hanasaku Iroha",
-      //       },
-      //       character: {
-      //         id: 5,
-      //         name: "Ohana Matsumae",
-      //       },
-      //     },
-      //   };
+      const res = await axios.get("/api/v1/quotes/random");
       setQuote(res.data.data);
     } catch (error) {
       console.log(error);
@@ -52,7 +35,12 @@ export const RandomAnimeQuote = () => {
           </div>
         </div>
       )}
-      {error && <div className="rquote-content error">Too many requests have been sent to the API. Please try again after an hour.</div>}
+      {error && (
+        <div className="rquote-content error">
+          Too many requests have been sent to the API. Please try again after an
+          hour.
+        </div>
+      )}
       {!quote && !error && (
         <div className="spinner-wrapper">
           <div className="spinner"></div>
