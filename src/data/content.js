@@ -8,6 +8,7 @@ import {SearchWord} from "../pages/activities/getDefinition";
 import {Jitter}  from "../pages/games/Jitter";
 import {RandomMeme} from "../pages/activities/RandomMemes";
 import { RandomJoke } from "../pages/activities/RandomJoke";
+import { RandomAnimeQuote } from "../pages/activities/RandomAnimeQuote";
 import meme from "../assets/activities/meme.jpg"
 import numberblocs from "../assets/numberblocks.png"
 import wordleicon from "../assets/games/Wordle/wordlejpg.png"
@@ -21,6 +22,13 @@ export const activities = [
         icon: "https://cdn-icons-png.flaticon.com/512/2541/2541991.png",
         urlTerm: "random-quotes",
         element: <RandomQuote />
+    },
+    {
+        title: "Random Anime Quotes",
+        description: "Get random anime quotes",
+        icon: "https://64.media.tumblr.com/7b526ba246f48e294ebc87fe2cbd8e1b/1a4bdb8275a18adc-c7/s250x400/94d6c7e70601111ba79b8801cd939694d0000018.jpg", // Add the path to the anime icon image
+        urlTerm: "random-anime-quotes",
+        element: <RandomAnimeQuote />, // Assuming you have a RandomQuote component for anime quotes
     },
     {
         title: "Random memes",
