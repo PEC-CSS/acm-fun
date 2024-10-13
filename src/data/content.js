@@ -11,11 +11,13 @@ import { RandomJoke } from "../pages/activities/RandomJoke";
 import { RandomAnimeQuote } from "../pages/activities/RandomAnimeQuote";
 import meme from "../assets/activities/meme.jpg"
 import dog from "../assets/activities/dogimage.jpeg"
+import cat from "../assets/activities/cat.jpg"
 import numberblocs from "../assets/numberblocks.png"
 import wordleicon from "../assets/games/Wordle/wordlejpg.png"
 import flagger from "../assets/games/flag guess/flagger.png"
 import Calculator from "../pages/activities/Calculator"
 import { DogHttpCode } from "../pages/activities/DogHttpCode";
+import { CatHttpCode } from "../pages/activities/CatHttpCode";
 
 export const activities = [
     {
@@ -73,6 +75,13 @@ export const activities = [
         icon: dog,
         urlTerm: "dog-http-status",
         element: <DogHttpCode />
+    },
+    {
+        title: "Cat Http Status Code",
+        description: "Get random cat images or meme",
+        icon: cat,
+        urlTerm: "cat-http-status",
+        element: <CatHttpCode />
     },
 ];
 
