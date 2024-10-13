@@ -1,0 +1,58 @@
+.dog-root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.dog-form {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.dog-input {
+    width: 25rem;
+    height: 5rem;
+    padding: 0.5rem;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-right: 10px;
+    transition: border-color 300ms;
+}
+
+.dog-input:focus {
+    outline: none;
+    border-color: blue;
+}
+
+.dog-submit {
+    font-size: 18px;
+    background-color: white;
+    border: 1px solid blue;
+    color: blue;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.dog-submit:hover {
+    cursor: pointer;
+    background-color: rgb(10, 80, 193);
+    color: white;
+    transform: scale(1.1);
+}
+
+.dog-error {
+    color: red;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.dog-image {
+    margin-top: 20px;
+    max-width: 30rem;
+    max-height: 30rem;
+    object-fit: contain;
+}
