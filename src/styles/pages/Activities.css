@@ -1,3 +1,81 @@
+/* Activities Page Styles */
+.activities-root {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 20px;
+}
+
 .activities-title {
-    padding-top: 50px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #032d7a;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.activities-title::after {
+    content: '';
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #26b4ec, #032d7a);
+    border-radius: 2px;
+}
+
+.activities-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .activities-content {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .activities-root {
+        padding: 15px;
+    }
+    
+    .activities-title {
+        font-size: 2.5rem;
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+    
+    .activities-content {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 0 10px 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .activities-title {
+        font-size: 2rem;
+        padding-top: 50px;
+        padding-bottom: 25px;
+        letter-spacing: 1px;
+    }
+    
+    .activities-content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 5px 30px;
+    }
 }
