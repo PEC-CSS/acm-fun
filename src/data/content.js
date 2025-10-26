@@ -9,6 +9,7 @@ import { Jitter } from "../pages/games/Jitter";
 import { RandomMeme } from "../pages/activities/RandomMemes";
 import { RandomJoke } from "../pages/activities/RandomJoke";
 import { RandomAnimeQuote } from "../pages/activities/RandomAnimeQuote";
+import { SimonSays } from "../pages/games/SimonSays";
 import meme from "../assets/activities/meme.jpg";
 import dog from "../assets/activities/dogimage.jpeg";
 import cat from "../assets/activities/cat.jpg";
@@ -120,5 +121,12 @@ export const games = [
     icon: flagger,
     urlTerm: "GuessTheFlag",
     element: <GuessTheFlag />,
+  },
+  {
+    title: "Simon Says",
+    description: "Memory game - repeat the color sequence!",
+    icon: "https://cdn-icons-png.flaticon.com/512/2991/2991148.png",
+    urlTerm: "simon-says",
+    element: <SimonSays />,
   },
 ];
