@@ -10,17 +10,17 @@ export const RandomQuote = () => {
     setQuote(null);
     setError(null);
 
-    const url = "https://zenquotes.io/api/random";
+    const url = "https://stoic-quotes.com/api/quote";
     const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(
-      `${url}?t=${Date.now()}`
+      url + `?t=${Date.now()}`
     )}`;
 
     axios
       .get(proxyUrl)
       .then((res) => {
+        // Parse the contents returned by the proxy
         const data = JSON.parse(res.data.contents);
-        const q = data[0];
-        setQuote({ q: q.q, a: q.a });
+        setQuote({ q: data.text, a: data.author });
       })
       .catch((err) => {
         setError(err);
@@ -45,9 +45,7 @@ export const RandomQuote = () => {
         </div>
       )}
 
-      {error && (
-        <div className="rquote-content error">{error.message}</div>
-      )}
+      {error && <div className="rquote-content error">{error.message}</div>}
 
       {!quote && !error && (
         <div className="spinner-wrapper">
