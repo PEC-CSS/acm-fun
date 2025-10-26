@@ -1,49 +1,51 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import "../../styles/pages/activities/RandomQuote.css";
+import "../../styles/pages/activities/RandomQuote.css"; // Reuse your styles
 
 export const RandomQuote = () => {
-  const [quote, setQuote] = useState(null);
+  const [joke, setJoke] = useState(null);
   const [error, setError] = useState(null);
 
-  const generateQuote = () => {
-    setQuote(null);
-    axios({
-      method: "GET",
-      url: "https://api.qutable.io/random",
-    })
-      .then((res) => setQuote(res.data))
-      .catch((error) => setError(error));
+  const generateJoke = () => {
+    setJoke(null);
+    setError(null);
+
+    axios
+      .get("https://official-joke-api.appspot.com/random_joke")
+      .then((res) => setJoke(res.data))
+      .catch((err) => setError(err));
   };
 
   useEffect(() => {
-    generateQuote();
+    generateJoke();
   }, []);
 
   return (
     <div className="rquote-root">
-      <h1 class="header">Random Quote Generator</h1>
-      <div class="description">
-        Generate any random quote to get some inspiration!
+      <h1 className="header">Random Joke Generator</h1>
+      <div className="description">
+        Get a random joke to brighten your day 😄
       </div>
-      {quote && (
+
+      {joke && (
         <div className="rquote-content">
-          <div className="rquote-quote">{quote.content}</div>
-          <div className="rquote-author">- {quote.author}</div>
+          <div className="rquote-quote">{joke.setup}</div>
+          <div className="rquote-author">{joke.punchline}</div>
         </div>
       )}
+
       {error && (
-        <div className="rquote-content error">
-          {error.message}
-        </div>
+        <div className="rquote-content error">{error.message}</div>
       )}
-      {!quote && !error && (
+
+      {!joke && !error && (
         <div className="spinner-wrapper">
           <div className="spinner"></div>
         </div>
       )}
-      <button className="rquote-button" onClick={generateQuote}>
-        Generate Quote
+
+      <button className="rquote-button" onClick={generateJoke}>
+        Generate Joke
       </button>
     </div>
   );
