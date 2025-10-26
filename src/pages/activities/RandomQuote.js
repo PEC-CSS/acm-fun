@@ -1,36 +1,47 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import "../../styles/pages/activities/RandomQuote.css"; // Reuse your styles
+import "../../styles/pages/activities/RandomQuote.css";
 
 export const RandomQuote = () => {
-  const [joke, setJoke] = useState(null);
+  const [quote, setQuote] = useState(null);
   const [error, setError] = useState(null);
 
-  const generateJoke = () => {
-    setJoke(null);
+  const generateQuote = () => {
+    setQuote(null);
     setError(null);
 
+    const url = "https://zenquotes.io/api/random";
+    const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(
+      `${url}?t=${Date.now()}`
+    )}`;
+
     axios
-      .get("https://official-joke-api.appspot.com/random_joke")
-      .then((res) => setJoke(res.data))
-      .catch((err) => setError(err));
+      .get(proxyUrl)
+      .then((res) => {
+        const data = JSON.parse(res.data.contents);
+        const q = data[0];
+        setQuote({ q: q.q, a: q.a });
+      })
+      .catch((err) => {
+        setError(err);
+      });
   };
 
   useEffect(() => {
-    generateJoke();
+    generateQuote();
   }, []);
 
   return (
     <div className="rquote-root">
-      <h1 className="header">Random Joke Generator</h1>
+      <h1 className="header">Random Quote Generator</h1>
       <div className="description">
-        Get a random joke to brighten your day 😄
+        Get a random quote to inspire your day 💡
       </div>
 
-      {joke && (
+      {quote && (
         <div className="rquote-content">
-          <div className="rquote-quote">{joke.setup}</div>
-          <div className="rquote-author">{joke.punchline}</div>
+          <div className="rquote-quote">“{quote.q}”</div>
+          <div className="rquote-author">— {quote.a || "Unknown"} </div>
         </div>
       )}
 
@@ -38,14 +49,14 @@ export const RandomQuote = () => {
         <div className="rquote-content error">{error.message}</div>
       )}
 
-      {!joke && !error && (
+      {!quote && !error && (
         <div className="spinner-wrapper">
           <div className="spinner"></div>
         </div>
       )}
 
-      <button className="rquote-button" onClick={generateJoke}>
-        Generate Joke
+      <button className="rquote-button" onClick={generateQuote}>
+        Generate Quote
       </button>
     </div>
   );
