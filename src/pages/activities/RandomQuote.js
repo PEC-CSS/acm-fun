@@ -41,7 +41,7 @@ export const RandomQuote = () => {
       {quote && (
         <div className="rquote-content">
           <div className="rquote-quote">“{quote.q}”</div>
-          <div className="rquote-author">— {quote.a || "Unknown"} </div>
+          <div className="rquote-author">— {quote.a || "Unknown"}</div>
         </div>
       )}
 
