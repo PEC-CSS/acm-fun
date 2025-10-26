@@ -1,0 +1,181 @@
+.simon-says-container {
+  text-align: center;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.simon-says-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.game-info {
+  margin-bottom: 2rem;
+}
+
+.level {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.message {
+  font-size: 1.1rem;
+  color: #555;
+  min-height: 30px;
+}
+
+.simon-board {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  grid-template-rows: repeat(2, 150px);
+  gap: 15px;
+  justify-content: center;
+  margin: 2rem auto;
+  padding: 20px;
+  background: #2c3e50;
+  border-radius: 50%;
+  width: fit-content;
+}
+
+.simon-button {
+  width: 150px;
+  height: 150px;
+  border: 5px solid #2c3e50;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  opacity: 0.7;
+}
+
+.simon-button:disabled {
+  cursor: not-allowed;
+}
+
+.simon-button:hover:not(:disabled) {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+
+.simon-button.red {
+  background-color: #e74c3c;
+  border-top-left-radius: 100%;
+}
+
+.simon-button.blue {
+  background-color: #3498db;
+  border-top-right-radius: 100%;
+}
+
+.simon-button.green {
+  background-color: #2ecc71;
+  border-bottom-left-radius: 100%;
+}
+
+.simon-button.yellow {
+  background-color: #f1c40f;
+  border-bottom-right-radius: 100%;
+}
+
+.simon-button.active {
+  opacity: 1;
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+}
+
+.simon-button.red.active {
+  background-color: #ff6b5a;
+  box-shadow: 0 0 30px #ff6b5a;
+}
+
+.simon-button.blue.active {
+  background-color: #5dade2;
+  box-shadow: 0 0 30px #5dade2;
+}
+
+.simon-button.green.active {
+  background-color: #58d68d;
+  box-shadow: 0 0 30px #58d68d;
+}
+
+.simon-button.yellow.active {
+  background-color: #f4d03f;
+  box-shadow: 0 0 30px #f4d03f;
+}
+
+.controls {
+  margin-top: 2rem;
+}
+
+.control-btn {
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 150px;
+}
+
+.start-btn {
+  background-color: #27ae60;
+  color: white;
+}
+
+.start-btn:hover {
+  background-color: #229954;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+}
+
+.reset-btn {
+  background-color: #e67e22;
+  color: white;
+}
+
+.reset-btn:hover {
+  background-color: #d35400;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+}
+
+@media (max-width: 600px) {
+  .simon-board {
+    grid-template-columns: repeat(2, 120px);
+    grid-template-rows: repeat(2, 120px);
+    gap: 10px;
+  }
+
+  .simon-button {
+    width: 120px;
+    height: 120px;
+  }
+
+  .simon-says-container h1 {
+    font-size: 2rem;
+  }
+
+  .level {
+    font-size: 1.3rem;
+  }
+
+  .message {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .simon-board {
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: repeat(2, 100px);
+    gap: 8px;
+  }
+
+  .simon-button {
+    width: 100px;
+    height: 100px;
+  }
+}
