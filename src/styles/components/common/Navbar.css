@@ -122,38 +122,8 @@
 }
 
 .indicator {
-    position: absolute;
-    top: -60%;
-    width: 70px;
-    height: 70px;
-    background: #26b4ec;
-    border-radius: 50%;
-    border: 6px solid var(--clr);
-    transition: 0.5s;
-}
-
-.indicator::before {
-    content: '';
-    position: absolute;
-    top: 60%;
-    left: -22px;
-    width: 23px;
-    height: 20px;
-    background-color: transparent;;
-    border-top-right-radius: 20px;
-    box-shadow: 0px -10px 0 0 var(--clr);
-}
-
-.indicator::after {
-    content: '';
-    position: absolute;
-    top: 60%;
-    right: -22px;
-    width: 23px;
-    height: 20px;
-    background-color: transparent;;
-    border-top-left-radius: 20px;
-    box-shadow: 0px -10px 0 0 var(--clr);
+  @apply absolute top-[-60%] w-[70px] h-[70px] border-[white] dark:border-[#111827] transition-[0.5s] rounded-[50%] border-[6px] border-solid before:content-[""] before:absolute before:left-[-22px] before:w-[23px] before:h-5 before:bg-transparent before:shadow-[0px_-10px_0_0_white] dark:before:shadow-[0px_-10px_0_0_#111827] before:rounded-tr-[20px] before:top-[60%] after:content-[""] after:absolute after:right-[-22px] after:w-[23px] after:h-5 after:bg-transparent after:shadow-[0px_-10px_0_0_white] dark:after:shadow-[0px_-10px_0_0_#111827] after:rounded-tl-[20px] after:top-[60%];
+  background: #26b4ec;
 }
 
 .navbar-root ul li:nth-child(1).active ~ .indicator {
