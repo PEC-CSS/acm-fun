@@ -11,6 +11,7 @@ import { RandomJoke } from "../pages/activities/RandomJoke";
 import { RandomAnimeQuote } from "../pages/activities/RandomAnimeQuote";
 import { SimonSays } from "../pages/games/SimonSays";
 import { ReactionTime } from "../pages/games/ReactionTime";
+import MemeCaptionMaker from "../pages/games/MemeCaptionMaker";
 import meme from "../assets/activities/meme.jpg";
 import dog from "../assets/activities/dogimage.jpeg";
 import cat from "../assets/activities/cat.jpg";
@@ -136,5 +137,12 @@ export const games = [
     icon: "https://cdn-icons-png.flaticon.com/512/2972/2972554.png",
     urlTerm: "reaction-time",
     element: <ReactionTime />,
+  },
+  {
+    title: "Meme Caption Maker",
+    description: "Create hilarious memes with custom captions",
+    icon: "https://cdn-icons-png.flaticon.com/512/2584/2584606.png",
+    urlTerm: "meme-caption-maker",
+    element: <MemeCaptionMaker />,
   },
 ];
