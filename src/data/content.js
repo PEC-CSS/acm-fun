@@ -10,6 +10,7 @@ import { RandomMeme } from "../pages/activities/RandomMemes";
 import { RandomJoke } from "../pages/activities/RandomJoke";
 import { RandomAnimeQuote } from "../pages/activities/RandomAnimeQuote";
 import { SimonSays } from "../pages/games/SimonSays";
+import { ReactionTime } from "../pages/games/ReactionTime";
 import MemeCaptionMaker from "../pages/games/MemeCaptionMaker";
 import meme from "../assets/activities/meme.jpg";
 import dog from "../assets/activities/dogimage.jpeg";
@@ -129,6 +130,13 @@ export const games = [
     icon: "https://cdn-icons-png.flaticon.com/512/2991/2991148.png",
     urlTerm: "simon-says",
     element: <SimonSays />,
+  },
+  {
+    title: "Reaction Time Test",
+    description: "Test your reflexes - click as fast as you can!",
+    icon: "https://cdn-icons-png.flaticon.com/512/2972/2972554.png",
+    urlTerm: "reaction-time",
+    element: <ReactionTime />,
   },
   {
     title: "Meme Caption Maker",
