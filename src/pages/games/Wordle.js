@@ -200,6 +200,28 @@ const Keyboard = () => {
   );
 }
 
+const HowToPlayPopup = ({ onClose }) => {
+  return (
+    <div className="WordlePopupOverlay">
+      <div className="WordlePopup">
+        <h2>How to Play</h2>
+        <p>Guess the <b>5-letter word</b> in 6 tries.</p>
+        <ul className="WordleRules">
+          <li>Each guess must be a valid 5-letter word.</li>
+          <li>After each guess, the color of the tiles will change to show how close your guess was to the word.</li>
+          <li><span className="rule-box correct"></span> = Correct letter in the correct position.</li>
+          <li><span className="rule-box almost"></span> = Letter is in the word but in the wrong spot.</li>
+          <li><span className="rule-box error"></span> = Letter not in the word.</li>
+        </ul>
+        <button className="WordleStartBtn" onClick={onClose}>
+          Start Game
+        </button>
+      </div>
+    </div>
+  );
+};
+
+
 export const Wordle=()=> {
 
   const boardDefault = [
@@ -221,6 +243,7 @@ export const Wordle=()=> {
     gameOver: false,
     guessedWord: false,
   });
+  const [showInstructions, setShowInstructions] = useState(true);
 
   useEffect(() => {
     generateWordSet().then((words) => {
@@ -281,7 +304,12 @@ export const Wordle=()=> {
       <nav className="Wordlenav">
         <h1 className="WordleTitle">Wordle</h1>
       </nav>
-      <AppContext.Provider
+
+      {showInstructions && (
+      <HowToPlayPopup onClose={() => setShowInstructions(false)} />
+    )}
+
+      {!showInstructions && ( <AppContext.Provider
         value={{
           board,
           setBoard,
@@ -314,7 +342,8 @@ export const Wordle=()=> {
             )}
           </div> : <Keyboard />}
         </div>
-      </AppContext.Provider>
+      </AppContext.Provider> 
+    )}
     </div>
   );
 }

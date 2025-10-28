@@ -1,10 +1,10 @@
 .Wordle {
     text-align: center;
-    background-color: white;
-    /* width: 100vw;
-    height: 100vh; */
+    background-color: black;
+     /* width: 100vw;
+     height: 100vh; */
     /* display: flex; */
-    color: black;
+    height:1000px
   }
   
   .Wordlenav {
@@ -19,9 +19,89 @@
   .WordleTitle{
     margin: 0;
     font-family: Helvetica, Arial, sans-serif;
-    color: black;
+    color: rgb(223, 223, 223);
     font-size: 45px;
   }
+
+.WordlePopupOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.WordlePopup {
+  background: #ffffff;
+  color: #000;
+  width: 90%;
+  max-width: 450px;
+  border-radius: 12px;
+  padding: 25px 30px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.WordlePopup h2 {
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+.WordlePopup p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.WordleRules {
+  text-align: left;
+  margin: 10px 0 0 0;
+  padding-left: 20px;
+}
+
+.WordleRules li {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+.rule-box {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+.rule-box.correct {
+  background-color: #528d4e;
+}
+
+.rule-box.almost {
+  background-color: #b49f39;
+}
+
+.rule-box.error {
+  background-color: #3a393c;
+}
+
+.WordleStartBtn {
+  background-color: #528d4e;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.WordleStartBtn:hover {
+  background-color: #437741;
+}
+
+
   .game {
     width: 100vw;
     height: calc(100vh - 170px);
@@ -34,10 +114,9 @@
   .Wordleboard {
     width: 450px;
     height: 550px;
-    border: 1px solid black;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    padding-bottom: 10px;
   }
   
   .row {
@@ -48,16 +127,15 @@
   }
   
   .letter {
-    flex: 33%;
-    height: 100%;
-    border: 1px solid grey;
+    width: 60px;
+    height: 60px;
+    border: 1px solid rgb(85, 78, 78);
     margin: 5px;
     display: grid;
-    min-height: 48px;
     place-items: center;
     font-size: 30px;
     font-weight: bolder;
-    color: black;
+    color: rgb(245, 245, 245);
     font-family: Arial, Helvetica, sans-serif;
   }
   
@@ -76,7 +154,7 @@
   .keyboard {
     width: 700px;
     height: 300px;
-    /* margin-top: px; */
+    margin-top: 10px;
   }
   
   .Wordleline1 {
@@ -114,6 +192,7 @@
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
+    font-weight: bold;
   }
   
   #big {
