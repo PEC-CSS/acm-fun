@@ -21,6 +21,7 @@ import flagger from "../assets/games/flag guess/flagger.png";
 import Calculator from "../pages/activities/Calculator";
 import { DogHttpCode } from "../pages/activities/DogHttpCode";
 import { CatHttpCode } from "../pages/activities/CatHttpCode";
+import  FlappyBird  from "../pages/games/FlappyBird";
 
 export const activities = [
   {
@@ -145,4 +146,11 @@ export const games = [
     urlTerm: "meme-caption-maker",
     element: <MemeCaptionMaker />,
   },
+  {
+    title: "Flappy Bird",
+    description: "Fly the bird and avoid obstacles!",
+    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSap9rEhSD7ghcjTSYN6HuXx0wejnzigvKncg&s",
+    urlTerm: "FlappyBird",
+    element: <FlappyBird />,
+  }
 ];
