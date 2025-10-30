@@ -17,6 +17,9 @@ Live URL:- https://acm-fun.vercel.app/
 - A fun and interactive web application built using React.js.
 - Engage with open source contributions in a beginner-friendly environment.
 - Collaborate with a community of like-minded individuals.
+- Website consists of two sections - Activities and Games
+- Activities: A variety of simple web tools and generators for things like random quotes, memes etc.
+- Games: A collection of interactive challenges like Wordle, Tic-Tac-Toe and many more.
 
 ## Tech Used
 
