@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "../../styles/pages/games/Gk_quiz.css";
 
 const ALL_QUESTIONS = [
@@ -24,6 +24,8 @@ const ALL_QUESTIONS = [
   { q: "Which is the hardest natural substance?", options: ["Gold", "Iron", "Diamond", "Silver"], ans: 2 }
 ];
 
+const QUESTION_TIME = 15; // seconds
+
 function shuffleArray(arr) {
   const copy = [...arr];
   for (let i = copy.length - 1; i > 0; i--) {
@@ -41,10 +43,47 @@ export default function GKQuiz() {
   const [answered, setAnswered] = useState(false);
   const [chosenIndex, setChosenIndex] = useState(null);
   const [showResult, setShowResult] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(QUESTION_TIME);
+
+  // to clear interval when question changes or component unmounts
+  const timerRef = useRef(null);
 
   useEffect(() => {
     startQuiz();
   }, []);
+
+  // start timer whenever question changes
+  useEffect(() => {
+    if (questions.length === 0) return;
+    startTimer();
+    return () => {
+      clearInterval(timerRef.current);
+    };
+  }, [current, questions]);
+
+  function startTimer() {
+    clearInterval(timerRef.current);
+    setTimeLeft(QUESTION_TIME);
+    timerRef.current = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev <= 1) {
+          clearInterval(timerRef.current);
+          if (!answered) {
+            handleTimeUp();
+          }
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+  }
+
+  function handleTimeUp() {
+    const qObj = questions[current];
+    setAnswered(true);
+    setChosenIndex(null);
+    setWrong((w) => w + 1);
+  }
 
   function startQuiz() {
     const shuffled = shuffleArray(ALL_QUESTIONS).slice(0, 5);
@@ -55,6 +94,7 @@ export default function GKQuiz() {
     setAnswered(false);
     setChosenIndex(null);
     setShowResult(false);
+    setTimeLeft(QUESTION_TIME);
   }
 
   function handleOptionClick(index) {
@@ -62,6 +102,7 @@ export default function GKQuiz() {
     const qObj = questions[current];
     setChosenIndex(index);
     setAnswered(true);
+    clearInterval(timerRef.current);
     if (index === qObj.ans) setCorrect((c) => c + 1);
     else setWrong((w) => w + 1);
   }
@@ -69,6 +110,7 @@ export default function GKQuiz() {
   function handleNext() {
     if (current === questions.length - 1) {
       setShowResult(true);
+      clearInterval(timerRef.current);
       return;
     }
     setCurrent((c) => c + 1);
@@ -101,6 +143,7 @@ export default function GKQuiz() {
   }
 
   const qObj = questions[current];
+  const pct = Math.round((timeLeft / QUESTION_TIME) * 100);
 
   return (
     <div className="gk-quiz-wrapper">
@@ -110,7 +153,13 @@ export default function GKQuiz() {
           <p className="gk-quiz-subtitle">Answer the questions and check instantly</p>
         </div>
         <div className="gk-quiz-body">
-          <p className="gk-quiz-progress">Question {current + 1} of {questions.length}</p>
+          <div className="gk-top-row">
+            <p className="gk-quiz-progress">Question {current + 1} of {questions.length}</p>
+            <div className={`gk-timer ${timeLeft <= 5 ? "low" : ""}`}>
+              <div className="gk-timer-bar" style={{ width: pct + "%" }}></div>
+              <span className="gk-timer-text">{timeLeft}s</span>
+            </div>
+          </div>
           <h3 className="gk-quiz-question">{qObj.q}</h3>
           <div className="gk-quiz-options">
             {qObj.options.map((opt, idx) => {
@@ -137,7 +186,7 @@ export default function GKQuiz() {
             <div className="gk-quiz-feedback">
               {chosenIndex === qObj.ans
                 ? <>✅ Correct! The right answer is: {qObj.options[qObj.ans]}</>
-                : <>❌ Wrong! The correct answer is: {qObj.options[qObj.ans]}</>}
+                : <>❌ Time up / wrong! The correct answer is: {qObj.options[qObj.ans]}</>}
             </div>
           )}
           {answered && (
