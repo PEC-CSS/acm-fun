@@ -165,3 +165,15 @@
 .navbar-root ul li:nth-child(3).active ~ .indicator {
     transform: translateX(calc(70px * 2));
 }
+/* support 4th item (Favorites) */
+.navbar-root ul li:nth-child(4).active ~ .indicator {
+    transform: translateX(calc(70px * 3));
+}
+
+/* ensure all navbar icons use the same visual size and are centered */
+.navbar-root ul li .navbar-item .icon img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    display: inline-block;
+}

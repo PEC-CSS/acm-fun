@@ -97,6 +97,19 @@
     color: white;
     transform: scale(1.1);
   }
+
+  /* Shared actions container used by wrappers to align Generate + Save */
+  .rquote-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .rquote-actions .button,
+  .rquote-actions .fav-button {
+    margin: 0;
+  }
   
   .spinner-wrapper {
     margin: auto;

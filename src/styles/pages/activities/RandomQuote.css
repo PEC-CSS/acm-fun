@@ -113,6 +113,19 @@
   transform: scale(1.1);
 }
 
+/* Actions container to align generate + save buttons */
+.rquote-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.rquote-actions .rquote-button,
+.rquote-actions .fav-button {
+  margin: 0;
+}
+
 .spinner-wrapper {
   margin: auto;
   width: 100px;
@@ -142,4 +155,14 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* Utility: truncate text to ~2 lines with fallback */
+.truncate-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  /* Fallback for non-webkit browsers: limit max-height to ~2 lines */
+  max-height: calc(2 * 2.2rem);
 }
