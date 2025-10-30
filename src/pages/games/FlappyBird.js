@@ -231,7 +231,7 @@ function FlappyBirdGame({ difficulty, onGameEnd }) {
       }
       if (bird.current.y < bird.current.radius) {
         bird.current.y = bird.current.radius + 3;
-        bird.current.vy = 0.5;git 
+        bird.current.vy = 0.5;
       }
 
 
