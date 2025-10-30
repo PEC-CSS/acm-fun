@@ -1,0 +1,28 @@
+.fav-button {
+  /* Match the Generate button visual style from RandomQuote.css */
+  font-size: 1.2rem;
+  background: white;
+  border-radius: 5px;
+  padding: 18px 20px;
+  border: 1px solid #4b4b4b;
+  box-shadow: 1px 1px 3px #4b4b4b;
+  margin: 10px 0;
+  transition-duration: 300ms;
+  cursor: pointer;
+}
+.fav-button:hover {
+  transform: scale(1.05);
+  background: black;
+  color: white;
+}
+.fav-button.saved {
+  background: #ffeaa7;
+  border-color: #ffcc00;
+}
+
+.fav-button.small {
+  /* helper class if a smaller variant is needed */
+  padding: 6px 10px;
+  font-size: 1rem;
+  box-shadow: none;
+}

@@ -1,0 +1,11 @@
+.fav-button {
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.fav-button.saved {
+  background: #ffeaa7;
+  border-color: #ffcc00;
+}

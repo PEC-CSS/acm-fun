@@ -3,6 +3,7 @@ import {Route, Routes} from "react-router-dom";
 import {Home} from "./pages/Home";
 import {Games} from "./pages/Games";
 import {Activities} from "./pages/Activities";
+import Favorites from "./pages/Favorites";
 import {activities, games} from "./data/content";
 import {Navbar} from './components/common/Navbar';
 import "slick-carousel/slick/slick.css";
@@ -24,6 +25,7 @@ function App() {
                     })
                 }
                 <Route exact path="/activities" element={<Activities />} />
+                <Route exact path="/favorites" element={<Favorites />} />
                 {
                     activities.map(activity => {
                         return (
