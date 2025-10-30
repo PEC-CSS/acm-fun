@@ -231,7 +231,7 @@ function FlappyBirdGame({ difficulty, onGameEnd }) {
       }
       if (bird.current.y < bird.current.radius) {
         bird.current.y = bird.current.radius + 3;
-        bird.current.vy = 0.5;
+        bird.current.vy = 0.5;git 
       }
 
 
@@ -242,7 +242,6 @@ function FlappyBirdGame({ difficulty, onGameEnd }) {
         let gapY = pipe.y, gapH = DIFF_SETTINGS[difficulty].pipeGap;
      
         if (cx + r > pipeX && cx - r < pipeX + pipeW) {
-  
           if (cy - r < gapY || cy + r > gapY + gapH) {
             setIsRunning(false);
             setTimeout(()=>onGameEnd(score),480);
@@ -260,7 +259,6 @@ function FlappyBirdGame({ difficulty, onGameEnd }) {
       });
 
       draw();
-
       requestId = requestAnimationFrame(gameLoop);
     }
 
@@ -332,7 +330,6 @@ export default function FlappyBirdMiniGame() {
           >Play Again</button>
         </div>
       }
-  
       <style>
         {`
         @keyframes fadeInScreen {
