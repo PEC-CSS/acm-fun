@@ -1,4 +1,5 @@
-import { RandomQuote } from "../pages/activities/RandomQuote";
+// RandomQuote wrapper is used instead of original to provide favorite/save UI
+import { RandomQuoteWithFav } from "../pages/activities_wrappers/RandomQuoteWithFav";
 import { MagicSquares } from "../pages/games/MagicSquares";
 import { TicTacToe } from "../pages/games/TicTacToe";
 import { Wordle } from "../pages/games/Wordle";
@@ -7,8 +8,9 @@ import { FortuneCard } from "../pages/activities/FotuneCard";
 import { SearchWord } from "../pages/activities/getDefinition";
 import { Jitter } from "../pages/games/Jitter";
 import { RandomMeme } from "../pages/activities/RandomMemes";
-import { RandomJoke } from "../pages/activities/RandomJoke";
-import { RandomAnimeQuote } from "../pages/activities/RandomAnimeQuote";
+// Use wrapper components that include favorite button functionality
+import { RandomJokeWithFav } from "../pages/activities_wrappers/RandomJokeWithFav";
+import { RandomAnimeQuoteWithFav } from "../pages/activities_wrappers/RandomAnimeQuoteWithFav";
 import { SimonSays } from "../pages/games/SimonSays";
 import { ReactionTime } from "../pages/games/ReactionTime";
 import MemeCaptionMaker from "../pages/games/MemeCaptionMaker";
@@ -22,6 +24,7 @@ import Calculator from "../pages/activities/Calculator";
 import GKQuiz from "../pages/games/Gk_quiz"
 import { DogHttpCode } from "../pages/activities/DogHttpCode";
 import { CatHttpCode } from "../pages/activities/CatHttpCode";
+import  FlappyBird  from "../pages/games/FlappyBird";
 
 export const activities = [
   {
@@ -29,14 +32,14 @@ export const activities = [
     description: "Get random quotes",
     icon: "https://cdn-icons-png.flaticon.com/512/2541/2541991.png",
     urlTerm: "random-quotes",
-    element: <RandomQuote />,
+    element: <RandomQuoteWithFav />,
   },
   {
     title: "Random Anime Quotes",
     description: "Get random anime quotes",
     icon: "https://64.media.tumblr.com/7b526ba246f48e294ebc87fe2cbd8e1b/1a4bdb8275a18adc-c7/s250x400/94d6c7e70601111ba79b8801cd939694d0000018.jpg",
     urlTerm: "random-anime-quotes",
-    element: <RandomAnimeQuote />,
+    element: <RandomAnimeQuoteWithFav />,
   },
   {
     title: "Random memes",
@@ -64,7 +67,7 @@ export const activities = [
     description: "Get random jokes",
     icon: "https://www.troublefreepool.com/media/joke-png.127455/full",
     urlTerm: "random-jokes",
-    element: <RandomJoke />,
+    element: <RandomJokeWithFav />,
   },
   {
     title: "Calculator",
@@ -152,5 +155,12 @@ export const games = [
     icon: "https://play-lh.googleusercontent.com/5PyR8hatywCKFQV4wFfsvyK97UrgSn5S1SQILV7zs7rBP5p9VhMEIyjfp_Vdybjk8Qc",
     urlTerm:"Gk Quiz",
     element:<GKQuiz/>,
+  },
+  {
+    title: "Flappy Bird",
+    description: "Fly the bird and avoid obstacles!",
+    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSap9rEhSD7ghcjTSYN6HuXx0wejnzigvKncg&s",
+    urlTerm: "FlappyBird",
+    element: <FlappyBird />,
   }
 ];
