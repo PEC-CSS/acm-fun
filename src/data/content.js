@@ -188,6 +188,8 @@ export const games = [
     icon: "https://img.freepik.com/free-vector/round-black-bomb-realistic-style_52683-15190.jpg?semt=ais_hybrid&w=740&q=80",
     urlTerm: "dont-click-the-bomb",
     element: <DontClickBomb />,
+      },
+  {
     title: "Typing Test",
     description: "Test your typing skills",
     icon :"https://typingmentor.com/_next/image/?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fbs3wcomf%2Fproduction%2F9f626374aa1c388a6418a077990771aff53d054f-1200x800.jpg%3Frect%3D0%2C35%2C1200%2C731%26w%3D808%26h%3D492%26fit%3Dcrop%26auto%3Dformat&w=1920&q=75",
