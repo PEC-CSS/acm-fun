@@ -25,6 +25,7 @@ import GKQuiz from "../pages/games/Gk_quiz"
 import { DogHttpCode } from "../pages/activities/DogHttpCode";
 import { CatHttpCode } from "../pages/activities/CatHttpCode";
 import  FlappyBird  from "../pages/games/FlappyBird";
+import RandomIdentity from "../pages/activities/RandomIdentity";
 
 export const activities = [
   {
@@ -90,6 +91,13 @@ export const activities = [
     urlTerm: "cat-http-status",
     element: <CatHttpCode />,
   },
+  {
+    title: "Random Identity Generator",
+    description:"Get random identity for yourself",
+    icon:"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/2a/51/52/2a5152df-66f0-fc94-6e5e-251d3b2d6ef8/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/1200x630wa.png",
+    urlTerm:"random-identity",
+    element:<RandomIdentity/>
+  }
 ];
 
 export const games = [

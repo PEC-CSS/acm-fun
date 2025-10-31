@@ -1,0 +1,129 @@
+/* src/styles/pages/activities/RandomIdentity.css */
+:root {
+  --bg: radial-gradient(circle at top, #0f172a 0%, #020617 45%, #000 80%);
+  --card-bg: rgba(10, 16, 26, 0.45);
+  --border: rgba(255, 255, 255, 0.12);
+  --accent: #f97316;
+  --accent-soft: rgba(249, 115, 22, 0.25);
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --radius-lg: 1.4rem;
+}
+
+.identity-wrapper {
+  min-height: 80vh;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+  position: relative;
+  padding: 2.5rem 1.2rem;
+  overflow: hidden;
+}
+
+.identity-glow {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.35), rgba(2, 6, 23, 0));
+  filter: blur(60px);
+  top: -70px;
+  right: -40px;
+  pointer-events: none;
+}
+
+.identity-card {
+  width: min(460px, 100%);
+  background: radial-gradient(circle at top, rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.25));
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  padding: 1.8rem 1.4rem 2.1rem;
+  text-align: center;
+  position: relative;
+}
+
+.identity-title {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.identity-sub {
+  margin-top: 0.3rem;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.identity-box {
+  background: radial-gradient(circle at top, rgba(15, 23, 42, 0.1), rgba(15, 23, 42, 0));
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 1.1rem;
+  margin-top: 1.1rem;
+  padding: 1.1rem 1rem;
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  font-weight: 600;
+  line-height: 1.45;
+  font-size: 1.02rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.identity-btn {
+  width: fit-content;
+  margin: 1.25rem auto 0;
+  background: linear-gradient(135deg, #fb923c 0%, #f97316 45%, #ea580c 100%);
+  color: #0f172a;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s ease-out, box-shadow 0.15s ease-out;
+  box-shadow: 0 12px 25px rgba(249, 115, 22, 0.4);
+}
+
+.identity-btn::after {
+  content: "↻";
+  font-size: 0.8rem;
+}
+
+.identity-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 15px 28px rgba(249, 115, 22, 0.45);
+}
+
+.identity-btn:active {
+  transform: translateY(0);
+}
+
+.identity-hint {
+  margin-top: 0.85rem;
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 520px) {
+  .identity-card {
+    padding: 1.4rem 1rem 1.8rem;
+  }
+  .identity-title {
+    font-size: 1.35rem;
+  }
+  .identity-box {
+    font-size: 0.97rem;
+  }
+  .identity-wrapper {
+    padding-inline: 0.65rem;
+  }
+}
