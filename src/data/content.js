@@ -8,6 +8,7 @@ import { FortuneCard } from "../pages/activities/FotuneCard";
 import { SearchWord } from "../pages/activities/getDefinition";
 import { Jitter } from "../pages/games/Jitter";
 import { RandomMeme } from "../pages/activities/RandomMemes";
+import { WordScramble } from "../pages/games/WordScramble";
 // Use wrapper components that include favorite button functionality
 import { RandomJokeWithFav } from "../pages/activities_wrappers/RandomJokeWithFav";
 import { RandomAnimeQuoteWithFav } from "../pages/activities_wrappers/RandomAnimeQuoteWithFav";
@@ -26,6 +27,7 @@ import { DogHttpCode } from "../pages/activities/DogHttpCode";
 import { CatHttpCode } from "../pages/activities/CatHttpCode";
 import  FlappyBird  from "../pages/games/FlappyBird";
 import RandomIdentity from "../pages/activities/RandomIdentity";
+import word_scramble_icon from "../assets/games/WordScramble/word_scramble.png";
 
 export const activities = [
   {
@@ -170,5 +172,12 @@ export const games = [
     icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSap9rEhSD7ghcjTSYN6HuXx0wejnzigvKncg&s",
     urlTerm: "FlappyBird",
     element: <FlappyBird />,
+  },
+  {
+    title: "Word Scramble",
+    description: "Word chaos! Can you fix it?",
+    icon: word_scramble_icon,
+    urlTerm: "WordScramble",
+    element: <WordScramble />,
   }
 ];
