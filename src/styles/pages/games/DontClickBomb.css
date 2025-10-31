@@ -1,0 +1,173 @@
+.bomb-wrapper {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 1.6rem 1.4rem 1.4rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+  text-align: center;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.bomb-header h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.4rem;
+}
+
+.bomb-header p {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-bottom: 1.1rem;
+}
+
+.bomb-stats {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.bomb-stat {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.5rem 1.1rem;
+  min-width: 90px;
+}
+
+.bomb-stat .label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: #94a3b8;
+  letter-spacing: 0.04em;
+}
+
+.bomb-stat .value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.bomb-over {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.bomb-grid {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 1.1rem;
+}
+
+.bomb-cell {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  height: 60px;
+  font-size: 1.7rem;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bomb-cell.is-safe:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.12);
+}
+
+.bomb-cell:disabled {
+  cursor: not-allowed;
+  opacity: 0.9;
+}
+
+/* bomb click animation */
+.explode {
+  animation: bombBoom 0.4s ease forwards;
+}
+
+@keyframes bombBoom {
+  0% {
+    transform: scale(1);
+    background: #fee2e2;
+  }
+  50% {
+    transform: scale(1.3);
+    background: #fca5a5;
+  }
+  100% {
+    transform: scale(0.9);
+    background: #fee2e2;
+  }
+}
+
+.bomb-actions {
+  margin-top: 1.2rem;
+}
+
+.bomb-btn {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.bomb-btn:hover {
+  background: #1d4ed8;
+}
+
+.bomb-hint {
+  margin-top: 0.85rem;
+  color: #94a3b8;
+  font-size: 0.78rem;
+}
+
+@media (max-width: 520px) {
+  .bomb-grid {
+    grid-template-columns: repeat(auto-fit, minmax(55px, 1fr)) !important;
+  }
+  .bomb-cell {
+    height: 55px;
+    font-size: 1.4rem;
+  }
+}
+.bomb-wrapper.hard .bomb-grid {
+  margin-top: 1rem;
+}
+
+.bomb-timer {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  font-weight: 500;
+  color: #1d4ed8;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.bomb-timer.low {
+  background: #fee2e2;
+  border-color: #fecaca;
+  color: #b91c1c;
+}
+
+@media (max-width: 520px) {
+  .bomb-wrapper.hard .bomb-grid {
+    grid-template-columns: repeat(auto-fit, minmax(45px, 1fr)) !important;
+  }
+}
