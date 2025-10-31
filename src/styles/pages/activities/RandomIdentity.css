@@ -1,61 +1,298 @@
 .identity-light-container {
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(180deg, #ffffff 0%, #f7f9fb 100%);
-  padding: 2rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f3f6ff 100%);
+  padding: 2.2rem 1.2rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .identity-card-light {
   background: #ffffff;
   border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-  padding: 2rem 2.5rem;
-  max-width: 450px;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+  padding: 2.1rem 2.4rem 2.2rem;
+  max-width: 500px;
   width: 100%;
   text-align: center;
-  transition: all 0.3s ease;
-}
-
-.identity-card-light:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 3;
 }
 
 .identity-title-light {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: 700;
   color: #1e293b;
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.3rem;
 }
 
-.identity-text-light {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #475569;
-  background: #f8fafc;
+.identity-sub-light {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-bottom: 1.1rem;
+}
+
+.identity-form {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.1rem;
+}
+
+.identity-date-input {
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
   border: 1px solid #e2e8f0;
-  border-radius: 14px;
-  padding: 1.2rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.4;
+  background: #ffffff;
+  font-size: 0.9rem;
+  min-width: 180px;
+  transition: 0.12s ease-in;
 }
 
-.identity-btn-light {
-  background: linear-gradient(135deg, #60a5fa, #3b82f6);
-  color: white;
+.identity-date-input:focus {
+  outline: none;
+  border-color: #93c5fd;
+  box-shadow: 0 0 0 3px rgba(147, 197, 253, 0.28);
+}
+
+/* small rectangle button */
+.identity-btn-rect {
+  background: #2563eb;
+  color: #fff;
   border: none;
-  padding: 0.7rem 1.8rem;
-  border-radius: 999px;
+  border-radius: 8px;
+  padding: 0.55rem 1.3rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
+  transition: background 0.1s ease-out, transform 0.08s ease-out;
+  box-shadow: 0 3px 10px rgba(37, 99, 235, 0.2);
 }
 
-.identity-btn-light:hover {
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+.identity-btn-rect:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.identity-btn-rect:active {
+  transform: translateY(0);
+}
+
+.identity-result {
+  background: #f8fafc;
+  border-radius: 16px;
+  padding: 1rem 0.9rem 1.1rem;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  margin-top: 1rem;
+}
+
+.pop-in {
+  animation: pop 0.35s ease-out;
+  transform-origin: center;
+}
+
+.glow {
+  box-shadow: 0 12px 35px rgba(96, 165, 250, 0.25);
+}
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(5px);
+  }
+  65% {
+    opacity: 1;
+    transform: scale(1.02) translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.identity-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+}
+
+.identity-zodiac-name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-top: 0.35rem;
+}
+
+.identity-traits {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0.6rem;
+}
+
+.identity-pill {
+  background: #e0edff;
+  color: #1d4ed8;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.identity-message {
+  margin-top: 0.8rem;
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+/* floating background bubbles */
+.with-anim .id-bubble {
+  position: absolute;
+  border-radius: 999px;
+  opacity: 0.25;
+  filter: blur(2px);
+  animation: float 7s ease-in-out infinite alternate;
+  z-index: 1;
+}
+
+.id-b1 {
+  width: 180px;
+  height: 180px;
+  background: #bfdbfe;
+  top: -40px;
+  right: -30px;
+}
+
+.id-b2 {
+  width: 120px;
+  height: 120px;
+  background: #fee2e2;
+  bottom: -30px;
+  left: 10px;
+  animation-delay: 1s;
+}
+
+.id-b3 {
+  width: 90px;
+  height: 90px;
+  background: #fef9c3;
+  top: 40%;
+  left: 12%;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(16px);
+  }
+}
+
+/* PARTY BOMBERS / CONFETTI */
+.party-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.party-bomber {
+  position: absolute;
+  top: 0;
+  width: 55px;
+  height: 110px;
+  background: radial-gradient(circle, #f97316 0%, #f97316 40%, rgba(249, 115, 22, 0) 41%);
+  opacity: 0;
+  animation: bomberIn 0.35s ease-out forwards;
+}
+
+.left-bomber {
+  left: 14px;
+  transform: rotate(-15deg);
+}
+
+.right-bomber {
+  right: 14px;
+  transform: rotate(15deg);
+  animation-delay: 0.05s;
+}
+
+@keyframes bomberIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+}
+
+.party-confetti {
+  position: absolute;
+  width: 12px;
+  height: 26px;
+  border-radius: 5px;
+  animation: fall 0.7s ease-out forwards;
+  opacity: 0;
+}
+
+.c1 {
+  left: 40px;
+  top: 20px;
+  background: #f97316;
+  animation-delay: 0.05s;
+}
+.c2 {
+  right: 40px;
+  top: 20px;
+  background: #38bdf8;
+  animation-delay: 0.08s;
+}
+.c3 {
+  left: 90px;
+  top: 10px;
+  background: #22c55e;
+  animation-delay: 0.1s;
+}
+.c4 {
+  right: 90px;
+  top: 12px;
+  background: #f43f5e;
+  animation-delay: 0.12s;
+}
+
+@keyframes fall {
+  0% {
+    opacity: 0;
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(120px) rotate(26deg);
+  }
+}
+
+@media (max-width: 540px) {
+  .identity-card-light {
+    padding: 1.5rem 1rem 1.6rem;
+  }
+  .identity-form {
+    flex-direction: column;
+  }
+  .identity-btn-rect {
+    width: 100%;
+  }
+  .left-bomber,
+  .right-bomber {
+    width: 50px;
+  }
 }
