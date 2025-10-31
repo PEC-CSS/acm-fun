@@ -28,6 +28,7 @@ import { CatHttpCode } from "../pages/activities/CatHttpCode";
 import  FlappyBird  from "../pages/games/FlappyBird";
 import RandomIdentity from "../pages/activities/RandomIdentity";
 import word_scramble_icon from "../assets/games/WordScramble/word_scramble.png";
+import TypingTest from "../pages/games/TypingTest";
 
 export const activities = [
   {
@@ -179,5 +180,13 @@ export const games = [
     icon: word_scramble_icon,
     urlTerm: "WordScramble",
     element: <WordScramble />,
+  },
+  {
+    title: "Typing Test",
+    description: "Test your typing skills",
+    icon :"https://typingmentor.com/_next/image/?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fbs3wcomf%2Fproduction%2F9f626374aa1c388a6418a077990771aff53d054f-1200x800.jpg%3Frect%3D0%2C35%2C1200%2C731%26w%3D808%26h%3D492%26fit%3Dcrop%26auto%3Dformat&w=1920&q=75",
+    urlTerm:"TypingTest",
+    element:<TypingTest/>,
+
   }
 ];
