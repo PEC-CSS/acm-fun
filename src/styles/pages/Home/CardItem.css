@@ -1,14 +1,14 @@
 .card-image{
     width: 266px;
-    height: 35vh; 
+    height: 36vh; 
     display: flex;
     justify-content: center;
     overflow: hidden;
     /* padding: 0 !important; */
 }
 .card-body{
-    width: 266px;
-    height: 22vh; 
+    width: 290px;
+    height: 28vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
