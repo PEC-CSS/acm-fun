@@ -21,6 +21,7 @@ import numberblocs from "../assets/numberblocks.png";
 import wordleicon from "../assets/games/Wordle/wordlejpg.png";
 import flagger from "../assets/games/flag guess/flagger.png";
 import Calculator from "../pages/activities/Calculator";
+import GKQuiz from "../pages/games/Gk_quiz"
 import { DogHttpCode } from "../pages/activities/DogHttpCode";
 import { CatHttpCode } from "../pages/activities/CatHttpCode";
 import  FlappyBird  from "../pages/games/FlappyBird";
@@ -147,6 +148,13 @@ export const games = [
     icon: "https://cdn-icons-png.flaticon.com/512/2584/2584606.png",
     urlTerm: "meme-caption-maker",
     element: <MemeCaptionMaker />,
+  },
+  {
+    title: "GK Quiz",
+    description:"Test your general knowledge with some cool questions",
+    icon: "https://play-lh.googleusercontent.com/5PyR8hatywCKFQV4wFfsvyK97UrgSn5S1SQILV7zs7rBP5p9VhMEIyjfp_Vdybjk8Qc",
+    urlTerm:"Gk Quiz",
+    element:<GKQuiz/>,
   },
   {
     title: "Flappy Bird",
