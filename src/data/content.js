@@ -28,7 +28,7 @@ import { CatHttpCode } from "../pages/activities/CatHttpCode";
 import  FlappyBird  from "../pages/games/FlappyBird";
 import RandomIdentity from "../pages/activities/RandomIdentity";
 import word_scramble_icon from "../assets/games/WordScramble/word_scramble.png";
-
+import DontClickBomb from "../pages/games/DontClickBomb";
 export const activities = [
   {
     title: "Random quotes",
@@ -179,5 +179,12 @@ export const games = [
     icon: word_scramble_icon,
     urlTerm: "WordScramble",
     element: <WordScramble />,
+  },
+  {
+   title: "Don't Click the Bomb",
+    description: "Click everything except 💣. Gets harder every round.",
+    icon: "https://img.freepik.com/free-vector/round-black-bomb-realistic-style_52683-15190.jpg?semt=ais_hybrid&w=740&q=80",
+    urlTerm: "dont-click-the-bomb",
+    element: <DontClickBomb />,
   }
 ];
