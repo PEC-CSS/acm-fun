@@ -92,10 +92,10 @@ export const activities = [
     element: <CatHttpCode />,
   },
   {
-    title: "Random Identity Generator",
-    description:"Get random identity for yourself",
+    title: "Zodiac Sign",
+    description:"Get to know your zodiac sign",
     icon:"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/2a/51/52/2a5152df-66f0-fc94-6e5e-251d3b2d6ef8/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/1200x630wa.png",
-    urlTerm:"random-identity",
+    urlTerm:"zodiac-sign",
     element:<RandomIdentity/>
   }
 ];
