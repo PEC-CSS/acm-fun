@@ -1,0 +1,220 @@
+.word-scramble-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 20px 14px 40px 14px;
+  background: linear-gradient(180deg, #f7fbff 0%, #eef6fb 100%);
+  color: #0b1220;
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  text-align: center;
+}
+
+.word-scramble-container h1 {
+  font-size: 1.9rem;
+  margin: 18px 0 20px 0;
+  font-weight: 700;
+  color: #0b1220;
+  line-height: 1.1;
+  z-index: 1;
+}
+
+/* align score and message to match the game card width */
+.game-info {
+  max-width: 560px;
+  width: 100%;
+  margin: 8px auto 14px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+/* when game-info is inside the card keep it full width and small bottom margin */
+.scramble-box .game-info { margin: 0 0 12px 0; padding: 0; }
+
+.score {
+  background: #ffffff;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+  color: #0b1220;
+  border: 1px solid rgba(15,17,36,0.04);
+  display: inline-block;
+  min-width: 96px;
+  text-align: center;
+}
+
+.message {
+  font-size: 0.95rem;
+  color: #223045;
+  text-align: right;
+  flex: 1;
+}
+
+.scramble-box {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 18px 18px;
+  box-shadow: 0 6px 14px rgba(14, 30, 60, 0.06);
+  max-width: 560px;
+  width: 100%;
+  margin-top: 72px; /* increase space between header and card */
+  position: relative;
+  padding-top: 56px; /* extra space for score/message inside header area */
+}
+
+.scrambled-word {
+  font-size: 1.6rem;
+  letter-spacing: 5px;
+  margin: 4px 0 8px 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #10243a;
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #f7fafc;
+}
+
+.hint-pattern {
+  font-family: "Courier New", monospace;
+  letter-spacing: 6px;
+  color: #10243a;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+input {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(15,17,36,0.06);
+  outline: none;
+  width: 240px;
+  height: 44px;
+  line-height: 22px;
+  box-sizing: border-box;
+  text-align: center;
+  background: #fff;
+  color: #10243a;
+  transition: box-shadow 120ms ease, transform 100ms ease;
+}
+
+input:focus { box-shadow: 0 6px 16px rgba(16,36,58,0.06); transform: translateY(-1px); }
+
+.controls {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.controls button {
+  cursor: pointer;
+  padding: 9px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition: transform 100ms ease, opacity 120ms ease;
+}
+
+.controls button:active { transform: translateY(1px); }
+.controls button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.start-btn {
+  background: #0ea34a;
+  color: #fff;
+  padding: 9px 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: none;
+  box-shadow: none;
+  transition: transform 100ms ease, opacity 120ms ease;
+  cursor: pointer;
+}
+.start-btn:hover { opacity: 0.95; }
+.start-btn:active { transform: translateY(1px); }
+.start-btn:focus { outline: 3px solid rgba(16,36,58,0.06); outline-offset: 2px; }
+.check-btn { background: #f5b400; color: #10243a; }
+.skip-btn { background: #2b9fd8; color: #fff; }
+.end-btn { background: #e14b4b; color: #fff; }
+
+/* Rules / pre-play area */
+.preplay { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.rules-box {
+  background: linear-gradient(180deg, #ffffff, #fbfdff);
+  border: 1px solid rgba(15,17,36,0.04);
+  box-shadow: 0 6px 14px rgba(14,30,60,0.04);
+  padding: 12px 16px;
+  border-radius: 8px;
+  max-width: 560px;
+  width: calc(100% - 40px);
+  text-align: left;
+  color: #0b1220;
+}
+.rules-box h3 { margin: 0 0 8px 0; font-size: 1.05rem; }
+.rules-box ol { margin: 0; padding-left: 18px; font-size: 0.95rem; color: #34495e; }
+.rules-box li { margin: 6px 0; }
+
+@media (max-width: 600px) {
+  .scrambled-word { font-size: 1.4rem; letter-spacing: 4px; }
+  input { width: 180px; }
+  .scramble-box { padding: 16px; padding-top: 52px; margin-top: 56px; }
+  .game-info { padding: 0 8px; }
+}
+
+/* mobile tweak for floating score pill */
+@media (max-width: 420px) {
+  .scramble-box .score {
+    top: -22px;
+    padding: 6px 12px;
+    min-width: 80px;
+  }
+  .scramble-box { margin-top: 56px; }
+}
+
+@media (max-width: 600px) {
+  .rules-box { width: calc(100% - 28px); padding: 10px 12px; }
+  .rules-box ol { font-size: 0.92rem; }
+}
+
+/* Positioning for score/message when inside the card header */
+.scramble-box .score {
+  position: absolute;
+  top: -26px; /* float slightly higher above the card */
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  min-width: 96px;
+  padding: 8px 18px;
+  background: #ffffff;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(16,36,58,0.12);
+  border: 1px solid rgba(15,17,36,0.06);
+  font-weight: 700;
+  color: #0b1220;
+  z-index: 5;
+  text-align: center;
+}
+
+.scramble-box .message {
+  position: absolute;
+  top: 28px; /* place message below the highlighted score */
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  text-align: center;
+  width: calc(100% - 40px);
+}
+
+/* subtle focus outline for accessibility */
+button:focus, input:focus { outline: 3px solid rgba(16,36,58,0.06); outline-offset: 2px; }
+
